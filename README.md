@@ -13,6 +13,13 @@ Why are there three
 
 I kinda get that the scss has to be different but cant computers do this?
 
+
+
+Remove sections from the pages?
+
+
+
 ## Checks
 
-Make sure everything seitches between className and class when back and forward from react
+Make sure everything switches between className and class when back and forward from react
+

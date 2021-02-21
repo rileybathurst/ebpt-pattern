@@ -41,32 +41,31 @@
  * Brand Colors
  * 1) Brand=specific colors
  */
-$color-brand-blue: #0000ff;
+ $emerald: #6CBAAD;
+ $moldavite: #046c59;
+ $moss: #044338;
+ 
+ $ember: #ff9500;
+ $amber: #EA8700;
+ $burnt: #a36021;
 
 /**
  * Neutral Colors
  * 1) Neutral colors are grayscale values used throughout the UI
  */
-$color-neutral-white: #fff;
-$color-neutral-gray-02: #f9f9f9;
-$color-neutral-gray-07: #eee;
-$color-neutral-gray-13: #ddd;
-$color-neutral-gray-27: #bbb;
-$color-neutral-gray-50: #808080;
-$color-neutral-gray-60: #666;
-$color-neutral-gray-73: #444;
-$color-neutral-gray-93: #131313;
-$color-neutral-black: #000;
+ $lace: #F8F8F8;
+ $stone: #414141;
+ $onyx: #0F0F0F;
 
 /**
  * Utility Colors
  * 1) Utility colors are colors used to provide feedback, such as alert messages,
  *    form validation, etc.
  */
-$color-utility-info: #0192d0;
-$color-utility-error: #b12a0b;
-$color-utility-success: #03804d;
-$color-utility-warning: #a59b15;
+// $color-utility-info: #0192d0;
+// $color-utility-error: #b12a0b;
+// $color-utility-success: #03804d;
+// $color-utility-warning: #a59b15;
 
 /*------------------------------------*\
     #TYPOGRAPHY
