@@ -6,19 +6,17 @@
  * Link base styles
  */
 a {
-	color: $moss;
-	// outline: 0;
-	// transition: color $anim-fade-quick $anim-ease;
+    color: $moss;
 
-	&:hover, &:focus {
-		color: $color-links-hover;
-	}
+    &:hover, &:focus {
+        color: $color-links-hover;
+    }
 
-	&:active {
-		color: $color-links-active;
-	}
+    &:active {
+        color: $color-links-active;
+    }
 
-	&:visited {
-		color: $color-links-visited;
-	}
+    &:visited {
+        color: $color-links-visited;
+    }
 }

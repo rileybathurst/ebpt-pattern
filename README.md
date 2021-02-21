@@ -5,7 +5,13 @@
 ## To DO
 
 ### Questions
-Why are there two _data/colors.json and _patterns/00-atoms/01-tokens/00-brand-colors.json?
+Why are there three 
+
+- _data/colors.json
+- _patterns/00-atoms/01-tokens/00-brand-colors.json
+- /css/scss/abstracts/_variables.scss
+
+I kinda get that the scss has to be different but cant computers do this?
 
 ## Checks
 
