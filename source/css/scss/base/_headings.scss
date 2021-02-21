@@ -2,30 +2,45 @@
     #HEADINGS
 \*------------------------------------*/
 
-/**
- * Heading 1 base styles
- */
+// type-scale.com
+// 1.250 Major Third
+
+// each line-height is 3 steps up
 h1 {
-	@include typographyHeadingXl();
-}
-
-/**
- * Heading 2 base styles
- */
+    margin-top: 0;
+    font-size: 3.052rem;
+    line-height: 5.96rem;
+  }
+  
 h2 {
-	@include typographyHeadingLarge();
+    font-size: 2.441rem;
+    line-height: 4.768rem;
 }
-
-/**
- * Heading 3 base styles
- */
+  
 h3 {
-	@include typographyHeadingMed2();
+    font-size: 1.953rem;
+    line-height: 3.815rem;
+}
+  
+h4 {
+    font-size: 1.563rem;
+    line-height: 3.052rem;
+}
+  
+h5 {
+    font-size: 1.25rem;
+    line-height: 2.441rem;
+}
+  
+small, .text_small {font-size: 0.8rem;}
+
+h1, h2, h3, h4, h5, h6 {
+    // font-weight: normal; 
+    font-style: normal;
+    font-weight: 300; // why am i doubling up on this?
 }
 
-/**
- * Heading 4 base styles
- */
-h4 {
-	@include typographyHeadingMed();
+// this probably needs documenting
+h5.in-paragraph {
+    margin-bottom: 0;
 }

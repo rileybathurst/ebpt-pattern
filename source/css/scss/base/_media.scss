@@ -7,6 +7,60 @@
  * 1) Allows for images to flex with varying screen size
  */
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
+
+// this is only a pattern lab adjustment
+.c-logo__img {
+    display: block;
+    max-width: 14rem;
+}
+
+svg {
+    width: 100%;
+    fill: $onyx;
+    max-width: 4rem;
+    max-height: 3rem;
+    margin: 1rem;
+    @media (min-width: 40rem) {
+        max-height: 2rem;
+    }
+}
+
+// this needs thought and documenting
+a svg {
+    fill: $emerald;
+}
+
+a svg:hover {
+    fill: $moss;
+}
+
+// this does prove kinda when it has to go back up through the pattern lab
+.team-heads {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    > div {
+        flex: 0 1 4rem; // guess and check
+        margin: 0.5rem 1rem;
+        text-align: center;
+
+        > a {
+            > .gatsby-image-wrapper {
+                border-radius: 50%;
+                border: 2px $lace solid;
+                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2); // this should be a variable
+                margin-bottom: 1rem;
+                max-height: 8rem;
+                // transition: 0.2s; // I want this but after it loads so I need to sort that
+            } // .gatsby-image-wrapper
+
+            > .gatsby-image-wrapper:hover {
+                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.5);
+            } // .gatsby-image-wrapper:hover
+        } // a
+    } // div
+} // .team-heads

@@ -2,10 +2,33 @@
     #BUTTONS
 \*------------------------------------*/
 
-/**
- * Button and submit inputs reset
- * 1) These should be styled using c-btn
- */
-button {
-	cursor: pointer;
+
+button,
+.buttoned {
+    display: block;
+    margin-top: 1rem;
+}
+
+button,
+.buttoned a {
+    width: auto;
+    cursor: pointer;
+    background: $emerald;
+    border: none; // browser reset
+    color: $stone;
+    padding: 8px 16px;
+    box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
+    text-decoration: none; // its obvious its a button
+
+    @media (min-width: 40rem) {
+        font-size: 1.563rem; // h4 // I cant use an extend in a media query
+        margin-left: -1rem; // this is something to do with moving away from the side of the page but it's messy
+    }
+}
+
+button:hover,
+.buttoned a:hover {
+    background: $moldavite;
+    color: $onyx;
+    box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
 }

@@ -1,34 +1,56 @@
 {
-	"iconPath": "../../icons.svg",
-	"icon": "search",
-	"icons": [
-		{
-			"iconPath": "../../icons.svg",
-			"icon": "minus"
-		},
-		{
-			"iconPath": "../../icons.svg",
-			"icon": "plus"
-		},
-		{
-			"iconPath": "../../icons.svg",
-			"icon": "search"
-		},
-		{
-			"iconPath": "../../icons.svg",
-			"icon": "triangle-down"
-		},
-		{
-			"iconPath": "../../icons.svg",
-			"icon": "triangle-up"
-		},
-		{
-			"iconPath": "../../icons.svg",
-			"icon": "triangle-right"
-		},
-		{
-			"iconPath": "../../icons.svg",
-			"icon": "triangle-left"
-		}
-	]
+    "iconPath": "../../",
+    "icon": "search",
+    "atoms-icon": [
+
+
+
+        {
+            "iconPath": "yelp.svg",
+            "icon": "yelp"
+        },
+        {
+            "iconPath": "../../minus.svg",
+            "icon": "facebook"
+        },
+        {
+            "iconPath": "../../minus.svg",
+            "icon": "instagram"
+        },
+        {
+            "iconPath": "../../minus.svg",
+            "icon": "nextdoor"
+        },
+
+
+
+        {
+            "iconPath": "../../minus.svg",
+            "icon": "minus"
+        },
+        {
+            "iconPath": "../../icons.svg",
+            "icon": "plus"
+        },
+        {
+            "iconPath": "../../icons.svg",
+            "icon": "search"
+        },
+        {
+            "iconPath": "../../icons.svg",
+            "icon": "triangle-down"
+        },
+        {
+            "iconPath": "../../icons.svg",
+            "icon": "triangle-up"
+        },
+        {
+            "iconPath": "../../icons.svg",
+            "icon": "triangle-right"
+        },
+        {
+            "iconPath": "../../icons.svg",
+            "icon": "triangle-left"
+        }
+    ]
 }
