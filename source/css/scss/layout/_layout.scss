@@ -14,3 +14,107 @@
 /*------------------------------------*\
     #GRID
 \*------------------------------------*/
+
+.two-fold {
+    max-width: 66rem; // guess and check
+    // this is a major design piece so detemines a lot of the site
+    // needs to be a variable
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+
+    > * { // I should use this more often
+        flex: 1 1 21rem;
+    }
+}
+
+// The question is ho many places can I use flex but not supports or flex gap
+// https://caniuse.com/flexbox-gap
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
+// still kinda low numbers I need a fallback
+@supports (gap: 2em) {
+    .two-fold {
+        gap: 2rem;
+    }
+}
+
+.measured {
+    max-width: 40rem;
+    // lets the top and bottom be defaults
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @media (min-width: 40rem) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// the hero styling and grid are tied
+#hero {
+    display: grid;
+    grid-template-columns: 0 1fr 0; // ? not sure what im doing with this
+    margin-bottom: 1rem;
+    overflow: hidden; // crop the image
+    @media (min-width: 20rem) {
+        grid-template-columns: 1fr 20rem 1fr; // ? not sure what im doing with this
+    }
+
+    @media (min-width: 42rem) {
+        grid-template-columns: 1fr 40rem 1fr; // ? not sure what im doing with this
+    }
+
+    #logo__backer {
+        grid-row: 1;
+        grid-column: 2;
+        place-self: center;
+        background: $lace;
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        opacity: 0.5;
+    }
+
+    #logo__border {
+        grid-row: 1;
+        grid-column: 2;
+        place-self: center;
+        border: 2px $lace solid;
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        margin: 1rem;
+    }
+
+    #logo {
+        grid-row: 1;
+        grid-column: 2;
+        place-self: center;
+        z-index: 1; // above the backer and border
+        // even tho this is after in the html it doesnt seem to be above
+
+        svg {
+            fill: $moss;
+            // margin: 1rem; this shouldnt be needed
+            max-width: 6rem;
+            max-height: 6rem;
+        }
+
+        svg:hover {
+            fill: $moldavite;
+        }
+    }
+
+    // background image
+    .gatsby-image-wrapper {
+        grid-row: 1;
+        grid-column: 1/4;
+        z-index: -1;
+        min-height: 10rem;
+        max-height: 20vh; // guess and check
+        opacity: 0.33;
+        object-fit: cover;
+        width: 100%;
+    }
+}

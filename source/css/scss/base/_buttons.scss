@@ -20,10 +20,12 @@ button,
     box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
     text-decoration: none; // its obvious its a button
 
+/*     
+    this is good but everywhere?
     @media (min-width: 40rem) {
         font-size: 1.563rem; // h4 // I cant use an extend in a media query
         margin-left: -1rem; // this is something to do with moving away from the side of the page but it's messy
-    }
+    } */
 }
 
 button:hover,
@@ -31,4 +33,19 @@ button:hover,
     background: $moldavite;
     color: $onyx;
     box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
+}
+
+/* I dont think this is in the right place
+#call {
+    margin-bottom: 2.441rem; // h2
+} */
+
+// should this just be a right button?
+.veil-button {
+    z-index: 99;
+    position: relative; // needed for the z index
+    float: right;
+    @media (min-width: 65rem) {
+        display: none;
+    }
 }

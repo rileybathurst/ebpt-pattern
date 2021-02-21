@@ -202,7 +202,7 @@
 /**
  * 1) Zero out margins and padding for elements
  */
-html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+html, body, div, object, iframe, h1, h2, h3, h4, #overt ul, h5, #veiled ul li, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
   margin: 0;
   padding: 0;
 }
@@ -232,14 +232,13 @@ html {
  * 1) Set the body element's height to at least 100% of the viewport.
  *    This is used to achieve a sticky footer
  */
-body {
-  min-height: 100vh;
-  /* 1 */
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  background-color: #F8F8F8;
-  color: #0F0F0F;
-}
-
+/* body {
+	// min-height: 100vh; /* 1 
+	// font-family: $font-family-primary;
+	// @include typographyBody();
+	// background-color: $color-body-bg;
+	// color: $color-body-text;
+} */
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
@@ -285,12 +284,12 @@ h3 {
   line-height: 3.815rem;
 }
 
-h4 {
+h4, #overt ul {
   font-size: 1.563rem;
   line-height: 3.052rem;
 }
 
-h5 {
+h5, #veiled ul li {
   font-size: 1.25rem;
   line-height: 2.441rem;
 }
@@ -299,12 +298,12 @@ small, .text_small {
   font-size: 0.8rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, #overt ul, h5, #veiled ul li, h6 {
   font-style: normal;
   font-weight: 300;
 }
 
-h5.in-paragraph {
+h5.in-paragraph, #veiled ul li.in-paragraph {
   margin-bottom: 0;
 }
 
@@ -447,13 +446,12 @@ button,
   padding: 8px 16px;
   box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
   text-decoration: none;
-}
-@media (min-width: 40rem) {
-  button,
-.buttoned a {
-    font-size: 1.563rem;
-    margin-left: -1rem;
-  }
+  /*     
+      this is good but everywhere?
+      @media (min-width: 40rem) {
+          font-size: 1.563rem; // h4 // I cant use an extend in a media query
+          margin-left: -1rem; // this is something to do with moving away from the side of the page but it's messy
+      } */
 }
 
 button:hover,
@@ -461,6 +459,21 @@ button:hover,
   background: #046c59;
   color: #0F0F0F;
   box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
+}
+
+/* I dont think this is in the right place
+#call {
+    margin-bottom: 2.441rem; // h2
+} */
+.veil-button {
+  z-index: 99;
+  position: relative;
+  float: right;
+}
+@media (min-width: 65rem) {
+  .veil-button {
+    display: none;
+  }
 }
 
 /*------------------------------------*\
@@ -627,6 +640,56 @@ pre[class*=language-] {
   font-family: monospace !important;
 }
 
+.vigilant {
+  background: #EA8700;
+  padding: 0.5rem 1rem;
+  width: min-content;
+}
+
+#contact > * {
+  background: #6CBAAD;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  width: max-content;
+}
+
+#overt ul {
+  display: none;
+  padding-left: 0;
+  justify-content: space-around;
+  list-style: none;
+}
+@media (min-width: 65rem) {
+  #overt ul {
+    display: flex;
+  }
+}
+#overt ul li {
+  gap: 1rem;
+  text-align: center;
+}
+
+#veiled {
+  position: absolute;
+  width: 100%;
+  margin-top: -1rem;
+  z-index: 99;
+  background: #6CBAAD;
+  transition: all 1s;
+  /*
+      why am I hiding something already hidden?
+      @media (min-width: 60rem) {
+          display: none;
+      } */
+}
+#veiled ul {
+  list-style: none;
+  padding: 1rem;
+}
+#veiled ul li {
+  margin-bottom: 1rem;
+}
+
 /*------------------------------------*\
     #TABLES
 \*------------------------------------*/
@@ -671,6 +734,95 @@ tr {
 /*------------------------------------*\
     #GRID
 \*------------------------------------*/
+.two-fold {
+  max-width: 66rem;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+.two-fold > * {
+  flex: 1 1 21rem;
+}
+
+@supports (gap: 2em) {
+  .two-fold {
+    gap: 2rem;
+  }
+}
+.measured {
+  max-width: 40rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media (min-width: 40rem) {
+  .measured {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: 0 1fr 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 20rem) {
+  #hero {
+    grid-template-columns: 1fr 20rem 1fr;
+  }
+}
+@media (min-width: 42rem) {
+  #hero {
+    grid-template-columns: 1fr 40rem 1fr;
+  }
+}
+#hero #logo__backer {
+  grid-row: 1;
+  grid-column: 2;
+  place-self: center;
+  background: #F8F8F8;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  opacity: 0.5;
+}
+#hero #logo__border {
+  grid-row: 1;
+  grid-column: 2;
+  place-self: center;
+  border: 2px #F8F8F8 solid;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem;
+}
+#hero #logo {
+  grid-row: 1;
+  grid-column: 2;
+  place-self: center;
+  z-index: 1;
+}
+#hero #logo svg {
+  fill: #044338;
+  max-width: 6rem;
+  max-height: 6rem;
+}
+#hero #logo svg:hover {
+  fill: #046c59;
+}
+#hero .gatsby-image-wrapper {
+  grid-row: 1;
+  grid-column: 1/4;
+  z-index: -1;
+  min-height: 10rem;
+  max-height: 20vh;
+  opacity: 0.33;
+  object-fit: cover;
+  width: 100%;
+}
+
 /*------------------------------------*\
     #UTILITIES
 \*------------------------------------*/

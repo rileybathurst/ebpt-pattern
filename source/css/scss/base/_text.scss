@@ -108,13 +108,64 @@ pre[class*="language-"] {
 .vigilant {
     background: $amber;
     padding: 0.5rem 1rem;
+    width: min-content;
 }
 
-.slide-back {
-    margin-left: -1rem;
-    padding-left: 1rem;
+// .slide-back {
+//     margin-left: -1rem;
+//     padding-left: 1rem;
+// }
+
+// .h-line {
+//     display: inline;
+// }
+
+// this naming is kinda terrible
+#contact > * {
+    background: $emerald;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    width: max-content; // less line-breaks
 }
 
-.h-line {
-    display: inline;
+// sort my naming out
+#overt ul {
+    display: none;
+    @media (min-width: 65rem) { // based on the .two-fold
+        display: flex;
+    }
+
+    @extend h4; // everything needs to fit to one line
+    padding-left: 0; // browser reset
+    justify-content: space-around; 
+    list-style: none; // reset
+
+    li {
+        gap: 1rem;
+        text-align: center; // if text does drop to two lines
+    } // li
+} // #overt ul
+
+#veiled {
+    position: absolute;
+    width: 100%;
+    margin-top: -1rem; // gatsby something
+    z-index: 99; // above any images logo etc
+    background: $emerald; // why is this down a step?
+    transition: all 1s;
+
+    ul {
+        list-style: none;
+        padding: 1rem;
+
+        li {
+            @extend h5; // these are big but not really tap targets
+            margin-bottom: 1rem;
+        }
+    }
+/*
+    why am I hiding something already hidden?
+    @media (min-width: 60rem) {
+        display: none;
+    } */
 }
