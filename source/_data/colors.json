@@ -1,0 +1,93 @@
+{
+	"brandColors" : [
+		{
+			"colorHex" : "#6CBAAD",
+			"colorName" : "Emerald",
+			"variable" : "$emerald"
+		},
+		{
+			"colorHex" : "#046c59",
+			"colorName" : "Moldavite",
+			"variable" : "$moldavite"
+		},
+		{
+			"colorHex" : "#044338",
+			"colorName" : "Moss",
+			"variable" : "$moss"
+		},
+		{
+			"colorHex" : "#ff9500",
+			"colorName" : "Ember",
+			"variable" : "$ember"
+		},
+		{
+			"colorHex" : "#EA8700",
+			"colorName" : "Amber",
+			"variable" : "$amber"
+		},
+		{
+			"colorHex" : "#a36021",
+			"colorName" : "Burnt",
+			"variable" : "$burnt"
+		}
+	],
+	"neutralColors" : [
+		{
+			"colorHex" : "#F8F8F8",
+			"colorName" : "Lace",
+			"variable" : "$lacce"
+		},
+		{
+			"colorHex" : "#414141",
+			"colorName" : "Stone",
+			"variable" : "$stone"
+		},
+		{
+			"colorHex" : "#0F0F0F",
+			"colorName" : "Onyx",
+			"variable" : "$onyx"
+		}
+	],
+	"utilityColors" : [
+		{
+			"colorHex" : "#0192d0",
+			"colorName" : "Info",
+			"variable" : "$color-utility-info"
+		},
+		{
+			"colorHex" : "#d3f2ff",
+			"colorName" : "Info Light",
+			"variable" : "$color-utility-info-light"
+		},
+		{
+			"colorHex" : "#b12a0b",
+			"colorName" : "Error",
+			"variable" : "$color-utility-error"
+		},
+		{
+			"colorHex" : "#fdded8",
+			"colorName" : "Error Light",
+			"variable" : "$color-utility-error-light"
+		},
+		{
+			"colorHex" : "#a59b15",
+			"colorName" : "Warning",
+			"variable" : "$color-utility-warning"
+		},
+		{
+			"colorHex" : "#fffecf",
+			"colorName" : "Warning Light",
+			"variable" : "$color-utility-warning-light"
+		},
+		{
+			"colorHex" : "#03804d",
+			"colorName" : "Success",
+			"variable" : "$color-utility-success"
+		},
+		{
+			"colorHex" : "#d4f3e6",
+			"colorName" : "Success Light",
+			"variable" : "$color-utility-success-light"
+		}
+	]
+}

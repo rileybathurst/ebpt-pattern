@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+			"name" : "Emerald",
+			"value" : "#6CBAAD",
+			"comment" : "$emerald"
+		},
+		{
+			"name" : "Moldavite",
+			"value" : "#046c59",
+			"comment" : "$moldavite"
+		},
+		{
+			"name" : "Moss",
+			"value" : "#044338",
+			"comment" : "$moss"
+		},
+		{
+			"name" : "Ember",
+			"value" : "#ff9500",
+			"comment" : "$ember"
+		},
+		{
+			"name" : "Amber",
+			"value" : "#EA8700",
+			"comment" : "$amber"
+		},
+		{
+			"name" : "Burnt",
+			"value" : "#a36021",
+			"comment" : "$burnt"
+		}
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass comments that start with <code>$color-brand-</code> in <code>./source/css/scss/abstracts/_comments.scss</code>"
+  }
+}
