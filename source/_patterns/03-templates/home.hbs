@@ -1,0 +1,171 @@
+{{!-- this needs way more bars --}}
+
+{{> organisms-desktop-header }}
+
+{{!-- should this be doing something specific? --}}
+<main>
+
+    {{!-- id is not used for styling --}}
+    <section id="intro" class="two-fold">
+
+        {{!-- do I really want to drop the font-family down? --}}
+        <h5 class="sofia">Emerald Bay Physical Therapy is a comprehensive center for orthopedic and manual physical therapy.</h5>
+        <p class="justified-40 home-baselined">We specialize in hands-on, one-on-one treatments that are specific to each patient’s goals. At EBPT, we are committed to health and wellness no matter your age, lifestyle, or athletic abilities. Our highly individualized programs are designed to promote complete recovery from injury and continue into healthy work and recreational activities. We stand out by offering aquatic therapy in our heated therapy pool, manual therapy in private treatment rooms and a multidisciplinary wellness approach. Our focus on quality time spent listening to patients, use of critical thinking to find the cause of pain, and effective manual techniques will exceed your expectations. </p>
+        
+        <div>{{!-- .two-fold flex section --}}
+            <h4 class="doublem"><Link to="/team" class="buttoned-above-40">Meet Our Team</Link></h4>
+
+            {{!-- this needs to become a list --}}
+            {{> atoms-team-head }}
+            <TeamHeads />
+        </div>
+        <div>{{!-- stay gold --}}</div>
+    </section>
+
+    <hr />
+
+    {{!-- id is not used for styling --}}
+    <section id="offerings">
+        {{!-- what is this insane class? --}}
+        {{!-- already a title I dont think it needs to be bold --}}
+        <h2 class="single-fold forty-h3"><strong>Our Physical Therapy and Wellness Offerings</strong></h2>
+
+        <div class="two-fold ">
+            {{!-- // I need to do something with it dropping onto a second line being more obvious --}}
+            <ul class="catalog ">
+                <li>Aquatic therapy</li>
+                <li>Post-surgical rehabilitation</li>
+                <li>Injury prevention assessments</li>
+                <li>Instrument-assisted soft tissue mobilization</li>
+                <li>Myofascial release</li>
+                <li>Cupping</li>
+            </ul> {{!-- needed for the 2 col layout --}}
+            <ul class="catalog ">
+                <li>Kinesio taping (Rock Tape)</li>
+                <li>Cervical mechanical traction</li>
+                <li>TRX training</li>
+                <li>Pilates reformer instruction</li>
+                <li>TENS electrical stimulation</li>
+            </ul>
+        </div>
+    </section>
+
+    <hr />
+
+    {{!-- id is not used for styling --}}
+    {{!-- when display mosaic becomes available this will be super useful --}}
+    <section id="gallery" class="single-fold image-stack">
+        <GymImage />
+        <Headshot />
+        <SnowyBuildingFrontImage />
+        <PoolImage />
+    </section>
+
+    <hr />
+
+    {{!-- id is not used for styling --}}
+    <section id="differences">
+        <div class="single-fold">
+            {{!-- symantically speaking we got an issue here --}}
+            <h2 class="forty-h3"><strong>Why We Are Different</strong></h2>
+            <h4>The unique blend of programs at Emerald Bay Physical Therapy provides you with:</h4>
+        </div>
+
+        <div class="two-fold">
+          <ul class="inventory">
+            <li>Highly individualized care</li>
+            <li>Specific interventions over generalized remedies</li>
+            <li>Detailed evaluations and personalized program development</li>
+            <li>Personal appointments over high volume</li>
+
+            <li>Definite goals designed to maximize performance and exceed expectations</li>
+            <li>Transition from rehabilitation to an exercise-based fitness program</li>
+          </ul>
+          <ul class="inventory">
+            <li>Comprehensive approach to fitness to meet the complex demands of daily life, athletic pursuits and high-level performance</li>
+            <li>Aquatic physical therapy</li>
+            <li>Our clinic is home to a 4000-gallon indoor therapy pool featuring an adjustable current, a depth of 3-5 feet to accommodate all heights, and is comfortably heated all year round</li>
+            <li>Decompress joints while increasing strength, flexibility</li>
+            <li>Whole body workout</li>
+            <li>Improve balance without risk of falling</li>
+          </ul>
+        </div>
+    </section>
+
+    <hr />
+
+    {{!-- id is not used for styling --}}
+    <section id="questions">
+        <div class="two-fold">
+            <h3><Link to="/questions">Therapy Questions</Link></h3>
+            <div class="slender-image">
+                <Kiley2 />
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    {{!-- id is not used for styling --}}
+    <section id="intake-forms">
+        <div class="single-fold">
+            <h2 class="doublem">Intake Forms</h2>
+        </div>
+        <div id="intake-forms" class="two-fold">
+            <div>{{!-- two fold wrapper --}}
+                <h5 class="vigilant slide-back h-line">Required</h5>
+                <ul class="">
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/NP-Intake-Forms.pdf">Patient Intake</a></h5>
+                        <p>General information to get you started.</p>
+                    </li>
+
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/HIPAA-Notice-of-Privacy-Practices-2.pdf">HIPAA Notice of Privacy Practices</a></h5>
+                        <p>Please read.</p>
+                    </li>
+
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/HIPAA-Acknowledgement-2.pdf">HIPAA Acknowledgement</a></h5>
+                        <p>Confirmation of receipt of notice of privacy practices.</p>
+                    </li>
+
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/HIPAA-Release-of-Information-2.pdf">HIPAA Release of Information</a></h5>
+                        <p>Authorization to use/disclose records if necessary.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>{{!-- two fold wrapper --}}
+                <h5 class="vigilant slide-back h-line">Choose One:</h5>
+                <ul>
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/questonnaire-Back-Index.pdf">Back index</a></h5>
+                        <p>Information about how your back condition affects your everyday life.</p>
+                    </li>
+
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/Neck-Initial-(neck).pdf">Neck Index</a></h5>
+                        <p>Information about how your neck condition affects your everyday life.</p>
+                    </li>
+
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/QuickDash-Initial-(Upper-Extremity).pdf">Arm, Shoulder, Hand</a></h5>
+                        <p>DASH (Disabilities of the Arm, Shoulder or Hand)</p>
+                    </li>
+
+                    <li>
+                        <h5><a href="https://ebpt-pdfs.netlify.app/LEFS-Initial-(Lower-Extremity).pdf">Hips, Legs, Knees, Ankles, or Feet</a></h5>
+                        <p>LEFS (Lower Extremity Functional Scale)</p>
+                    </li>
+                </ul>
+            </div>{{!-- two-fold wrapper --}}
+        </div>{{!-- .two-fold --}}
+    </section>
+
+    <hr />
+
+</main>
+
+{{> organisms-footer }} 

@@ -121,7 +121,7 @@ pre[class*="language-"] {
 // }
 
 // this naming is kinda terrible
-#contact > * {
+#contact > h4 {
     background: $emerald;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
@@ -168,4 +168,42 @@ pre[class*="language-"] {
     @media (min-width: 60rem) {
         display: none;
     } */
+}
+
+/* almost entirley sure this should be the same in or out
+.two-fold {
+    .catalog {
+        // this is to do with stacking on smaller screens
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+ */
+
+/* .catalog is h3 list .inventory is h4 list
+that could be a lot clearer */
+
+// lots of lists maybe don't use that to sort font sizes?
+// I need to do something with it dropping onto a second line being more obvious
+.catalog {
+    list-style: none; // not sure this is quite right
+    padding-left: 0; // reset
+    @extend h3;
+    color: $stone;
+
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+.inventory {
+    // this should probably match catalog
+    // list-style: none;
+    // padding-left: 0; // browser reset
+    @extend h4;
+    margin: 0; // this might need to be reinstated at larger sizes
+
+    li {
+        margin-bottom: 1rem;
+    }
 }

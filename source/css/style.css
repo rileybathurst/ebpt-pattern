@@ -202,7 +202,7 @@
 /**
  * 1) Zero out margins and padding for elements
  */
-html, body, div, object, iframe, h1, h2, h3, h4, #overt ul, h5, #veiled ul li, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+html, body, div, object, iframe, h1, h2, h3, .catalog, h4, .inventory, #overt ul, h5, #veiled ul li, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
   margin: 0;
   padding: 0;
 }
@@ -279,12 +279,12 @@ h2 {
   line-height: 4.768rem;
 }
 
-h3 {
+h3, .catalog {
   font-size: 1.953rem;
   line-height: 3.815rem;
 }
 
-h4, #overt ul {
+h4, .inventory, #overt ul {
   font-size: 1.563rem;
   line-height: 3.052rem;
 }
@@ -298,7 +298,7 @@ small, .text_small {
   font-size: 0.8rem;
 }
 
-h1, h2, h3, h4, #overt ul, h5, #veiled ul li, h6 {
+h1, h2, h3, .catalog, h4, .inventory, #overt ul, h5, #veiled ul li, h6 {
   font-style: normal;
   font-weight: 300;
 }
@@ -646,7 +646,7 @@ pre[class*=language-] {
   width: min-content;
 }
 
-#contact > * {
+#contact > h4, #contact > .inventory, #overt #contact > ul {
   background: #6CBAAD;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
@@ -687,6 +687,33 @@ pre[class*=language-] {
   padding: 1rem;
 }
 #veiled ul li {
+  margin-bottom: 1rem;
+}
+
+/* almost entirley sure this should be the same in or out
+.two-fold {
+    .catalog {
+        // this is to do with stacking on smaller screens
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+ */
+/* .catalog is h3 list .inventory is h4 list
+that could be a lot clearer */
+.catalog {
+  list-style: none;
+  padding-left: 0;
+  color: #414141;
+}
+.catalog li {
+  margin-bottom: 1rem;
+}
+
+.inventory {
+  margin: 0;
+}
+.inventory li {
   margin-bottom: 1rem;
 }
 
@@ -750,6 +777,12 @@ tr {
     gap: 2rem;
   }
 }
+.single-fold {
+  max-width: 66rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .measured {
   max-width: 40rem;
   margin-left: 1rem;
@@ -821,6 +854,57 @@ tr {
   opacity: 0.33;
   object-fit: cover;
   width: 100%;
+}
+
+#footer-social {
+  border-top: 1rem solid #6CBAAD;
+  background: #044338;
+  color: #F8F8F8;
+  padding: 1.953rem;
+}
+#footer-social a {
+  color: #F8F8F8;
+}
+#footer-social a:hover {
+  color: #6CBAAD;
+}
+#footer-social > h5, #veiled ul #footer-social > li {
+  text-align: center;
+}
+#footer-social ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+#footer-social ul li {
+  padding: 0.5rem;
+}
+#footer-social ul li a {
+  display: flex;
+}
+
+.veiled__header a {
+  display: block;
+  margin-top: 2rem;
+}
+.veiled__header a svg {
+  max-height: 5rem;
+  max-width: 5rem;
+  fill: #044338;
+}
+.veiled__header a svg:hover {
+  fill: #046c59;
+}
+
+.close-button {
+  margin-top: 0;
+  background: #044338;
+  color: #6CBAAD;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
 }
 
 /*------------------------------------*\

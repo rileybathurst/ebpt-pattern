@@ -15,6 +15,7 @@
     #GRID
 \*------------------------------------*/
 
+// this should always be on a section div etc not on the content
 .two-fold {
     max-width: 66rem; // guess and check
     // this is a major design piece so detemines a lot of the site
@@ -37,6 +38,14 @@
     .two-fold {
         gap: 2rem;
     }
+}
+
+// this is to match the two-fold for things like titles
+// this should always be on a section div etc not on the content
+.single-fold {
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .measured {
@@ -117,4 +126,74 @@
         object-fit: cover;
         width: 100%;
     }
+}
+
+
+#footer-social {
+    border-top: 1rem solid $emerald;
+    background: $moss;
+    color: $lace;
+    padding: 1.953rem;
+
+    a {
+        color: $lace;
+    }
+
+    a:hover {
+        color: $emerald;
+    }
+
+    // slightly specific targeting but thats ok
+    > h5 {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0; // reset
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            padding: 0.5rem;
+
+            a {
+                // the svg to sit center
+                display: flex;
+            }
+        }
+    }
+
+
+}
+
+
+
+.veiled__header {
+    // padding-bottom: 0 !important; // overwrite #veiled ul
+    a {
+        display: block;
+        margin-top: 2rem;
+
+        svg {
+            max-height: 5rem;
+            max-width: 5rem;
+            fill: $moss;
+        }
+
+        svg:hover {
+            fill: $moldavite;
+        }
+    }
+}
+
+// this could look more like a button
+.close-button {
+    margin-top: 0;
+    background: $moss;
+    color: $emerald;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
 }
