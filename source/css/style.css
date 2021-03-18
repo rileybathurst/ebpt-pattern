@@ -525,6 +525,10 @@ a svg:hover {
   fill: #044338;
 }
 
+.pl-c-pattern__toggle-icon {
+  margin: 0;
+}
+
 .team-heads {
   display: flex;
   flex-wrap: wrap;

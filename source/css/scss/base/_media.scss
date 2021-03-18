@@ -22,7 +22,7 @@ svg {
     fill: $onyx;
     max-width: 4rem;
     max-height: 3rem;
-    margin: 1rem;
+    margin: 1rem; // this feels heavy handed but maybe it's right
     @media (min-width: 40rem) {
         max-height: 2rem;
     }
@@ -35,6 +35,11 @@ a svg {
 
 a svg:hover {
     fill: $moss;
+}
+
+// this is only for the pattern lab
+.pl-c-pattern__toggle-icon {
+    margin: 0;
 }
 
 // this does prove kinda when it has to go back up through the pattern lab
