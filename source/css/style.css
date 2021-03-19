@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------*\
     #TABLE OF CONTENTS
 \*------------------------------------*/
@@ -202,7 +203,7 @@
 /**
  * 1) Zero out margins and padding for elements
  */
-html, body, div, object, iframe, h1, h2, h3, .catalog, h4, .inventory, #overt ul, h5, #veiled ul li, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+html, body, div, object, iframe, h1, h2, h3, h4, .catalog, h5, .inventory, #veiled ul li, #overt ul, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
   margin: 0;
   padding: 0;
 }
@@ -279,17 +280,17 @@ h2 {
   line-height: 4.768rem;
 }
 
-h3, .catalog {
+h3 {
   font-size: 1.953rem;
   line-height: 3.815rem;
 }
 
-h4, .inventory, #overt ul {
+h4, .catalog {
   font-size: 1.563rem;
   line-height: 3.052rem;
 }
 
-h5, #veiled ul li {
+h5, .inventory, #veiled ul li, #overt ul {
   font-size: 1.25rem;
   line-height: 2.441rem;
 }
@@ -298,12 +299,12 @@ small, .text_small {
   font-size: 0.8rem;
 }
 
-h1, h2, h3, .catalog, h4, .inventory, #overt ul, h5, #veiled ul li, h6 {
+h1, h2, h3, h4, .catalog, h5, .inventory, #veiled ul li, #overt ul, h6 {
   font-style: normal;
   font-weight: 300;
 }
 
-h5.in-paragraph, #veiled ul li.in-paragraph {
+h5.in-paragraph, .in-paragraph.inventory, #veiled ul li.in-paragraph, #overt ul.in-paragraph {
   margin-bottom: 0;
 }
 
@@ -432,8 +433,9 @@ select {
 \*------------------------------------*/
 button,
 .buttoned {
-  display: block;
+  display: flex;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 button,
@@ -461,10 +463,11 @@ button:hover,
   box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
 }
 
-/* I dont think this is in the right place
-#call {
-    margin-bottom: 2.441rem; // h2
-} */
+a[href^="tel:"]:before {
+  content: "☎";
+  margin-right: 0.5em;
+}
+
 .veil-button {
   z-index: 99;
   position: relative;
@@ -572,6 +575,16 @@ p {
   margin-bottom: 1rem;
 }
 
+.home-baselined {
+  margin-top: 0;
+}
+@media (min-width: 40rem) {
+  .home-baselined {
+    margin-top: 2rem;
+    line-height: 2.3rem;
+  }
+}
+
 /**
  * Blockquote base styles
  */
@@ -647,10 +660,10 @@ pre[class*=language-] {
 .vigilant {
   background: #EA8700;
   padding: 0.5rem 1rem;
-  width: min-content;
+  width: max-content;
 }
 
-#contact > h4, #contact > .inventory, #overt #contact > ul {
+#contact > h4, #contact > .catalog {
   background: #6CBAAD;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
@@ -872,7 +885,7 @@ tr {
 #footer-social a:hover {
   color: #6CBAAD;
 }
-#footer-social > h5, #veiled ul #footer-social > li {
+#footer-social > h5, #overt #footer-social > ul, #veiled ul #footer-social > li, #footer-social > .inventory {
   text-align: center;
 }
 #footer-social ul {

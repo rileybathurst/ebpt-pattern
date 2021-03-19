@@ -1,14 +1,17 @@
 <footer>
-    <section class="two-fold">
-        {{> molecules-footer-hours }}
-        {{> molecules-footer-contact }}
-    </section>
+  <section class="two-fold">
+    {{> molecules-footer-hours }}
+    {{> molecules-footer-contact }}
+  </section>
 
-    <section id="footer-social">
-        <ul class="measured">
-            <li>Icons</li>
-        </ul>
+  <section id="footer-social">
+    <ul class="measured">
+      <li>{{> molecules-hero-logo }}</li>
+      <li>{{> molecules-hero-logo }}</li>
+      <li>{{> molecules-hero-logo }}</li>
+      <li>{{> molecules-hero-logo }}</li>
+    </ul>
 
-        <h5 className="h-center"><a href="/">business name bars</a></h5>
-    </section>
+    <h5 className="h-center"><a href="/">{{ company.name }}</a></h5>
+  </section>
 </footer>

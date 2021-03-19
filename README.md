@@ -4,6 +4,8 @@
 
 ## To DO
 
+- tidy up the logos
+
 ### Questions
 Why are there three 
 

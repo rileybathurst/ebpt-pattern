@@ -21,6 +21,16 @@ p {
     margin-bottom: $spacing;
 }
 
+// this mgight not be finished yet
+.home-baselined {
+    margin-top: 0;
+
+    @media (min-width: 40rem) {
+        margin-top: 2rem; // guess and check
+        line-height: 2.3rem; // guess and check
+    }
+}
+
 /**
  * Blockquote base styles
  */
@@ -108,17 +118,9 @@ pre[class*="language-"] {
 .vigilant {
     background: $amber;
     padding: 0.5rem 1rem;
-    width: min-content;
+    width: max-content; // this is to be min content
+    // min-content breaks lines after every word
 }
-
-// .slide-back {
-//     margin-left: -1rem;
-//     padding-left: 1rem;
-// }
-
-// .h-line {
-//     display: inline;
-// }
 
 // this naming is kinda terrible
 #contact > h4 {
@@ -135,7 +137,8 @@ pre[class*="language-"] {
         display: flex;
     }
 
-    @extend h4; // everything needs to fit to one line
+    @extend h5; // everything needs to fit to one line
+    // this was h4 but I think even smaller is nice now we have a full line
     padding-left: 0; // browser reset
     justify-content: space-around; 
     list-style: none; // reset
@@ -188,7 +191,7 @@ that could be a lot clearer */
 .catalog {
     list-style: none; // not sure this is quite right
     padding-left: 0; // reset
-    @extend h3;
+    @extend h4;
     color: $stone;
 
     li {
@@ -200,7 +203,7 @@ that could be a lot clearer */
     // this should probably match catalog
     // list-style: none;
     // padding-left: 0; // browser reset
-    @extend h4;
+    @extend h5;
     margin: 0; // this might need to be reinstated at larger sizes
 
     li {

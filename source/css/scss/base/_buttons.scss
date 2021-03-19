@@ -5,10 +5,13 @@
 
 button,
 .buttoned {
-    display: block;
+    display: flex; // guess and check
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    // margin: 1rem revert; // this isn't right but im interested if something is possible?
 }
 
+// Gap refers to the class and the class a
 button,
 .buttoned a {
     width: auto;
@@ -35,10 +38,10 @@ button:hover,
     box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
 }
 
-/* I dont think this is in the right place
-#call {
-    margin-bottom: 2.441rem; // h2
-} */
+a[href^="tel:"]:before {
+    content: "\260E";
+    margin-right: 0.5em;
+}
 
 // should this just be a right button?
 .veil-button {
