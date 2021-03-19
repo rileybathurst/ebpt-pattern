@@ -8,16 +8,14 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+/**
+ * Paragraph base styles
+ */
   p, .sofia {
     font-family: "sofia-pro", sans-serif; // adobe font
     font-weight: 400;
     font-style: normal;
-}
-
-/**
- * Paragraph base styles
- */
-p {
+    line-height: 1.5;
     margin-bottom: $spacing;
 }
 
@@ -26,7 +24,7 @@ p {
     margin-top: 0;
 
     @media (min-width: 40rem) {
-        margin-top: 2rem; // guess and check
+        margin-top: 2rem; // guess and check // should be based on h5?
         line-height: 2.3rem; // guess and check
     }
 }
@@ -45,19 +43,12 @@ blockquote {
 /**
  * Horizontal rule base styles
  */
-/* hr {
-    border: 0;
-    height: 1px;
-    // background: $color-neutral-gray-50;
-    margin: 1rem 0;
-} */
 
 hr {
     border: none;
     border-bottom: 2px solid $emerald;
     margin: 1.25rem auto; // h5
-
-    // Am I sure this is the only way I use this?
+    // this could be weird if I throw one in an not expecting this
     width: 50vw;
     margin-right: 50vw;
 }
@@ -65,15 +56,11 @@ hr {
 /**
  * Selection styles
  */
-/* ::-moz-selection {
-    color: $color-text-highlight;
-    background: $color-text-highlight-bg; // Gecko Browsers
-}
-
+::-moz-selection,
 ::selection {
     color: $color-text-highlight;
-    background: $color-text-highlight-bg; // WebKit/Blink Browsers
-} */
+    // background: lighten($emerald, 10 ); // WebKit/Blink Browsers
+}
 
 /**
  * Code base styles

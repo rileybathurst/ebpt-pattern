@@ -20,9 +20,10 @@ img {
 svg {
     width: 100%;
     fill: $onyx;
-    max-width: 4rem;
+    max-width: 4rem; // most of the time these are square?
     max-height: 3rem;
-    margin: 1rem; // this feels heavy handed but maybe it's right
+    margin: 1rem;
+    // this feels heavy handed but maybe it's right
     @media (min-width: 40rem) {
         max-height: 2rem;
     }
@@ -57,10 +58,12 @@ a svg:hover {
             > .gatsby-image-wrapper {
                 border-radius: 50%;
                 border: 2px $lace solid;
-                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2); // this should be a variable
+                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
+                // this should be a variable
                 margin-bottom: 1rem;
                 max-height: 8rem;
-                // transition: 0.2s; // I want this but after it loads so I need to sort that
+                // transition: 0.2s;
+                // I want this but after it loads so I need to sort that
             } // .gatsby-image-wrapper
 
             > .gatsby-image-wrapper:hover {

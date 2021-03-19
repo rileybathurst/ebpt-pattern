@@ -1,10 +1,14 @@
-{{!-- theres a problem with the paths that needs to be fixed for these --}}
-
-<ul class="icon-grid">
-    {{#each icons}}
-    <li class="icon-grid__item">
-        {{> atoms-icon icons }}
-        <span class="icon-grid__label">{{ icon }}</span>
-    </li>
-    {{/each}}
+{{# atoms-icon }}
+<ul>
+  <li>
+    {{ icon }}
+    {{!-- must be a way of doing this without an image --}}
+    {{!-- I could just put the svg in the icons file but it's not elegant --}}
+    {{!-- <img src="{{ iconPath }}" /> --}}
+    <svg {{ svg }}></svg>
+    {{!-- nope this still isn't it Im not sure about the way pf doing quotes }}
+    {{!-- from inside a json doc I can't use bars to bring in an atom --}}
+    {{!-- I cant even do a single path for this --}}
+  </li>
 </ul>
+{{/ atoms-icon }}
