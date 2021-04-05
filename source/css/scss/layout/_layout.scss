@@ -128,12 +128,11 @@
     }
 }
 
-
 #footer-social {
     border-top: 1rem solid $emerald;
     background: $moss;
     color: $lace;
-    padding: 1.953rem;
+    padding: 1.953rem; // why this number
 
     a {
         color: $lace;
@@ -146,7 +145,15 @@
     // slightly specific targeting but thats ok
     > h5 {
         text-align: center;
-    }
+    } // h5
+
+    // interesting little variable for all <h>
+    @for $i from 1 through 6 {
+        > h#{$i} {
+            // this is a weird double thing that I think could be done better
+            text-align: center;
+        } // h
+    } // @for
 
     ul {
         list-style: none;
@@ -160,14 +167,10 @@
             a {
                 // the svg to sit center
                 display: flex;
-            }
-        }
-    }
-
-
-}
-
-
+            } // a
+        } // li
+    } // ul
+} // #footer-social
 
 .veiled__header {
     // padding-bottom: 0 !important; // overwrite #veiled ul

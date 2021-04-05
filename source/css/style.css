@@ -876,6 +876,24 @@ tr {
 #footer-social > h5, #overt #footer-social > ul, #veiled ul #footer-social > li, #footer-social > .inventory {
   text-align: center;
 }
+#footer-social > h1 {
+  text-align: center;
+}
+#footer-social > h2 {
+  text-align: center;
+}
+#footer-social > h3 {
+  text-align: center;
+}
+#footer-social > h4, #footer-social > .catalog {
+  text-align: center;
+}
+#footer-social > h5, #overt #footer-social > ul, #veiled ul #footer-social > li, #footer-social > .inventory {
+  text-align: center;
+}
+#footer-social > h6 {
+  text-align: center;
+}
 #footer-social ul {
   list-style: none;
   padding-left: 0;
