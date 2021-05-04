@@ -3,41 +3,38 @@
 \*------------------------------------*/
 
 html {
-    font-family: "brandon-grotesque", sans-serif; // adobe font
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  font-family: "brandon-grotesque", sans-serif; // typekit font
 }
 
-/**
- * Paragraph base styles
- */
-  p, .sofia {
-    font-family: "sofia-pro", sans-serif; // adobe font
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.5;
-    margin-bottom: $spacing;
+// type-scale.com // this is giving me problems im fixing
+// 1.250 Major Third
+body {
+  font-size: 16px;
+  line-height: 1.25rem; // 20px
+  font-style: normal;
+  font-weight: 400; // regular weight brandon grotesque
+  color: $onyx;
 }
 
-// this mgight not be finished yet
+// this might not be finished yet
 .home-baselined {
-    margin-top: 0;
+  margin-top: 0;
 
-    @media (min-width: 40rem) {
-        margin-top: 2rem; // guess and check // should be based on h5?
-        line-height: 2.3rem; // guess and check
-    }
+  @media (min-width: 40rem) {
+    margin-top: 2rem; // guess and check // should be based on h5?
+    line-height: 2.3rem; // guess and check
+  }
 }
 
 /**
  * Blockquote base styles
  */
 blockquote {
-    font-style: italic;
-    // border-left: 1px solid $color-neutral-gray-50;
-    // color: $color-neutral-gray-50;
-    padding-left: 1rem;
-    margin-bottom: $spacing;
+  font-style: italic;
+  // border-left: 1px solid $color-neutral-gray-50;
+  // color: $color-neutral-gray-50;
+  padding-left: 1rem;
+  margin-bottom: $spacing;
 }
 
 /**
@@ -45,12 +42,12 @@ blockquote {
  */
 
 hr {
-    border: none;
-    border-bottom: 2px solid $emerald;
-    margin: 1.25rem auto; // h5
-    // this could be weird if I throw one in an not expecting this
-    width: 50vw;
-    margin-right: 50vw;
+  border: none;
+  border-bottom: 2px solid $emerald;
+  margin: 1.25rem auto; // h5
+  // this could be weird if I throw one in an not expecting this
+  width: 50vw;
+  margin-right: 50vw;
 }
 
 /**
@@ -58,38 +55,38 @@ hr {
  */
 ::-moz-selection,
 ::selection {
-    color: $emerald;
-    // background: lighten($emerald, 10 ); // WebKit/Blink Browsers
+  color: $emerald;
+  // background: lighten($emerald, 10 ); // WebKit/Blink Browsers
 }
 
 /**
  * Code base styles
  */
 code {
-    display: inline-block;
-    // background: $color-neutral-gray-02;
-    // border: 1px solid $color-neutral-gray-13;
-    padding: 0.2rem 0.5rem;
-    line-height: 1.2;
-    font-size: 0.85rem;
+  display: inline-block;
+  // background: $color-neutral-gray-02;
+  // border: 1px solid $color-neutral-gray-13;
+  padding: 0.2rem 0.5rem;
+  line-height: 1.2;
+  font-size: 0.85rem;
 }
 
 /**
  * Preformatted text base styles
  */
 pre {
-    // background: $color-neutral-gray-02;
-    // border: 1px solid $color-neutral-gray-13;
-    font-size: $font-size-med;
-    padding: 1rem;
-    overflow-x: auto;
+  // background: $color-neutral-gray-02;
+  // border: 1px solid $color-neutral-gray-13;
+  font-size: $font-size-med;
+  padding: 1rem;
+  overflow-x: auto;
 
-    /**
+  /**
      * Remove border from code within preformatted text block
      */
-    code {
-        border: 0;
-    }
+  code {
+    border: 0;
+  }
 }
 
 /**
@@ -98,77 +95,66 @@ pre {
  */
 code[class*="language-"],
 pre[class*="language-"] {
-    font-family: monospace !important;
+  font-family: monospace !important;
 }
 
 // Im not sure if this goes here which probably means its not great
 .vigilant {
-    background: $amber;
+    background: $ember;
     padding: 0.5rem 1rem;
-    width: max-content; // this is to be min content
-    // min-content breaks lines after every word
-}
+  }
 
 // this naming is kinda terrible
 #contact > h4 {
-    background: $emerald;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    width: max-content; // less line-breaks
+  background: $emerald;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  width: max-content; // less line-breaks
 }
 
 // sort my naming out
 #overt ul {
-    display: none;
-    @media (min-width: 65rem) { // based on the .two-fold
-        display: flex;
-    }
+  display: none;
+  @media (min-width: 65rem) {
+    // based on the .two-fold
+    display: flex;
+  }
 
-    @extend h5; // everything needs to fit to one line
-    // this was h4 but I think even smaller is nice now we have a full line
-    padding-left: 0; // browser reset
-    justify-content: space-around; 
-    list-style: none; // reset
+  @extend h5; // everything needs to fit to one line
+  // this was h4 but I think even smaller is nice now we have a full line
+  padding-left: 0; // browser reset
+  justify-content: space-around;
+  list-style: none; // reset
 
-    li {
-        gap: 1rem;
-        text-align: center; // if text does drop to two lines
-    } // li
+  li {
+    gap: 1rem;
+    text-align: center; // if text does drop to two lines
+  } // li
 } // #overt ul
 
 #veiled {
-    position: absolute;
-    width: 100%;
-    margin-top: -1rem; // gatsby something
-    z-index: 99; // above any images logo etc
-    background: $emerald; // why is this down a step?
-    transition: all 1s;
+  position: absolute;
+  width: 100%;
+  margin-top: -1rem; // gatsby something
+  z-index: 99; // above any images logo etc
+  background: $emerald; // why is this down a step?
+  transition: all 1s;
 
-    ul {
-        list-style: none;
-        padding: 1rem;
+  ul {
+    list-style: none;
+    padding: 1rem;
 
-        li {
-            @extend h5; // these are big but not really tap targets
-            margin-bottom: 1rem;
-        }
+    li {
+      @extend h5; // these are big but not really tap targets
+      margin-bottom: 1rem;
     }
-/*
+  }
+  /*
     why am I hiding something already hidden?
     @media (min-width: 60rem) {
         display: none;
     } */
 }
-
-/* almost entirley sure this should be the same in or out
-.two-fold {
-    .catalog {
-        // this is to do with stacking on smaller screens
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
- */
 
 /* .catalog is h3 list .inventory is h4 list
 that could be a lot clearer */
@@ -176,24 +162,24 @@ that could be a lot clearer */
 // lots of lists maybe don't use that to sort font sizes?
 // I need to do something with it dropping onto a second line being more obvious
 .catalog {
-    list-style: none; // not sure this is quite right
-    padding-left: 0; // reset
-    @extend h4;
-    color: $stone;
+  list-style: none; // not sure this is quite right
+  padding-left: 0; // reset
+  @extend h4;
+  color: $stone;
 
-    li {
-        margin-bottom: 1rem;
-    }
+  li {
+    margin-bottom: 1rem;
+  }
 }
 
 .inventory {
-    // this should probably match catalog
-    // list-style: none;
-    // padding-left: 0; // browser reset
-    @extend h5;
-    margin: 0; // this might need to be reinstated at larger sizes
+  // this should probably match catalog
+  // list-style: none;
+  // padding-left: 0; // browser reset
+  @extend h5;
+  margin: 0; // this might need to be reinstated at larger sizes
 
-    li {
-        margin-bottom: 1rem;
-    }
+  li {
+    margin-bottom: 1rem;
+  }
 }

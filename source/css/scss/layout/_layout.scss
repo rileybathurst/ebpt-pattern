@@ -78,7 +78,7 @@
         grid-row: 1;
         grid-column: 2;
         place-self: center;
-        background: $lace;
+        background: $pearl;
         border-radius: 50%;
         width: 8rem;
         height: 8rem;
@@ -89,7 +89,7 @@
         grid-row: 1;
         grid-column: 2;
         place-self: center;
-        border: 2px $lace solid;
+        border: 2px $pearl solid;
         border-radius: 50%;
         width: 8rem;
         height: 8rem;
@@ -131,11 +131,11 @@
 #footer-social {
     border-top: 1rem solid $emerald;
     background: $moss;
-    color: $lace;
+    color: $pearl;
     padding: 1.953rem; // why this number
 
     a {
-        color: $lace;
+        color: $pearl;
     }
 
     a:hover {

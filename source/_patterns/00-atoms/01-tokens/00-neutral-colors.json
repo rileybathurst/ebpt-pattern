@@ -1,13 +1,18 @@
 {
   "items": [
 {
-  "name": "$lace",
+  "name": "$pearl",
   "value": "#F8F8F8",
   "comment": ""
 },
 {
+  "name": "$hematite",
+  "value": "#909090",
+  "comment": ""
+},
+{
   "name": "$stone",
-  "value": "#414141",
+  "value": "#5f5f5f",
   "comment": ""
 },
 {

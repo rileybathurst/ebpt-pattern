@@ -2,33 +2,23 @@
   "items": [
     {
             "name" : "Emerald",
-            "value" : "#6CBAAD",
+            "value" : "#499E8F",
             "comment" : "$emerald"
         },
         {
             "name" : "Moldavite",
-            "value" : "#046c59",
+            "value" : "#3D7E69",
             "comment" : "$moldavite"
         },
         {
             "name" : "Moss",
-            "value" : "#044338",
+            "value" : "#2E5D58",
             "comment" : "$moss"
         },
         {
             "name" : "Ember",
-            "value" : "#ff9500",
+            "value" : "#EA6A00",
             "comment" : "$ember"
-        },
-        {
-            "name" : "Amber",
-            "value" : "#EA8700",
-            "comment" : "$amber"
-        },
-        {
-            "name" : "Burnt",
-            "value" : "#a36021",
-            "comment" : "$burnt"
         }
   ],
   "meta": {

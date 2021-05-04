@@ -1,44 +1,39 @@
 {
 	"brandColors" : [
 		{
-			"colorHex" : "#6CBAAD",
+			"colorHex" : "#499E8F",
 			"colorName" : "Emerald",
 			"variable" : "$emerald"
 		},
 		{
-			"colorHex" : "#046c59",
+			"colorHex" : "#3D7E69",
 			"colorName" : "Moldavite",
 			"variable" : "$moldavite"
 		},
 		{
-			"colorHex" : "#044338",
+			"colorHex" : "#2E5D58",
 			"colorName" : "Moss",
 			"variable" : "$moss"
 		},
 		{
-			"colorHex" : "#ff9500",
+			"colorHex" : "#EA6A00",
 			"colorName" : "Ember",
 			"variable" : "$ember"
-		},
-		{
-			"colorHex" : "#EA8700",
-			"colorName" : "Amber",
-			"variable" : "$amber"
-		},
-		{
-			"colorHex" : "#a36021",
-			"colorName" : "Burnt",
-			"variable" : "$burnt"
 		}
 	],
 	"neutralColors" : [
 		{
 			"colorHex" : "#F8F8F8",
-			"colorName" : "Lace",
-			"variable" : "$lacce"
+			"colorName" : "Pearl",
+			"variable" : "$pearl"
 		},
 		{
-			"colorHex" : "#414141",
+			"colorHex" : "#909090",
+			"colorName" : "Hematite",
+			"variable" : "$hematite"
+		},
+		{
+			"colorHex" : "#5f5f5f",
 			"colorName" : "Stone",
 			"variable" : "$stone"
 		},

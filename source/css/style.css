@@ -247,10 +247,10 @@ html {
  * Link base styles
  */
 a {
-  color: #0F0F0F;
+  color: #0f0f0f;
 }
 a:hover, a:focus {
-  color: #044338;
+  color: #2E5D58;
 }
 
 /*------------------------------------*\
@@ -269,43 +269,59 @@ ol, ul {
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
-h1 {
+h1,
+.h1 {
   margin-top: 0;
   font-size: 3.052rem;
-  line-height: 5.96rem;
+  line-height: 4.578rem;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 2.441rem;
-  line-height: 4.768rem;
+  line-height: 3.6615rem;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: 1.953rem;
-  line-height: 3.815rem;
+  line-height: 2.9295rem;
 }
 
-h4, .catalog {
+h4, .catalog,
+.h4 {
   font-size: 1.563rem;
-  line-height: 3.052rem;
+  line-height: 2.3445rem;
 }
 
-h5, .inventory, #veiled ul li, #overt ul {
+h5, .inventory, #veiled ul li, #overt ul,
+.h5 {
   font-size: 1.25rem;
-  line-height: 2.441rem;
+  line-height: 1.875rem;
 }
 
-small, .text_small {
-  font-size: 0.8rem;
-}
-
-h1, h2, h3, h4, .catalog, h5, .inventory, #veiled ul li, #overt ul, h6 {
-  font-style: normal;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.catalog,
+.h4,
+h5,
+.inventory,
+#veiled ul li,
+#overt ul,
+.h5,
+h6,
+.h6 {
   font-weight: 300;
 }
 
-h5.in-paragraph, .in-paragraph.inventory, #veiled ul li.in-paragraph, #overt ul.in-paragraph {
-  margin-bottom: 0;
+small,
+.text_small {
+  font-size: 0.8rem;
 }
 
 /*------------------------------------*\
@@ -442,9 +458,9 @@ button,
 .buttoned a {
   width: auto;
   cursor: pointer;
-  background: #6CBAAD;
+  background: #499E8F;
   border: none;
-  color: #414141;
+  color: #5f5f5f;
   padding: 8px 16px;
   box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
   text-decoration: none;
@@ -458,8 +474,8 @@ button,
 
 button:hover,
 .buttoned a:hover {
-  background: #046c59;
-  color: #0F0F0F;
+  background: #3D7E69;
+  color: #0f0f0f;
   box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
 }
 
@@ -509,7 +525,7 @@ img {
 
 svg {
   width: 100%;
-  fill: #0F0F0F;
+  fill: #0f0f0f;
   max-width: 4rem;
   max-height: 3rem;
   margin: 1rem;
@@ -521,11 +537,11 @@ svg {
 }
 
 a svg {
-  fill: #6CBAAD;
+  fill: #499E8F;
 }
 
 a svg:hover {
-  fill: #044338;
+  fill: #2E5D58;
 }
 
 .pl-c-pattern__toggle-icon {
@@ -544,7 +560,7 @@ a svg:hover {
 }
 .team-heads > div > a > .gatsby-image-wrapper {
   border-radius: 50%;
-  border: 2px #F8F8F8 solid;
+  border: 2px #f8f8f8 solid;
   box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
   margin-bottom: 1rem;
   max-height: 8rem;
@@ -558,19 +574,14 @@ a svg:hover {
 \*------------------------------------*/
 html {
   font-family: "brandon-grotesque", sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
-/**
- * Paragraph base styles
- */
-p, .sofia {
-  font-family: "sofia-pro", sans-serif;
-  font-weight: 400;
+body {
+  font-size: 16px;
+  line-height: 1.25rem;
   font-style: normal;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  font-weight: 400;
+  color: #0f0f0f;
 }
 
 .home-baselined {
@@ -597,7 +608,7 @@ blockquote {
  */
 hr {
   border: none;
-  border-bottom: 2px solid #6CBAAD;
+  border-bottom: 2px solid #499E8F;
   margin: 1.25rem auto;
   width: 50vw;
   margin-right: 50vw;
@@ -608,7 +619,7 @@ hr {
  */
 ::-moz-selection,
 ::selection {
-  color: #6CBAAD;
+  color: #499E8F;
 }
 
 /**
@@ -629,8 +640,8 @@ pre {
   padding: 1rem;
   overflow-x: auto;
   /**
-   * Remove border from code within preformatted text block
-   */
+     * Remove border from code within preformatted text block
+     */
 }
 pre code {
   border: 0;
@@ -646,13 +657,12 @@ pre[class*=language-] {
 }
 
 .vigilant {
-  background: #EA8700;
+  background: #EA6A00;
   padding: 0.5rem 1rem;
-  width: max-content;
 }
 
 #contact > h4, #contact > .catalog {
-  background: #6CBAAD;
+  background: #499E8F;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   width: max-content;
@@ -679,13 +689,13 @@ pre[class*=language-] {
   width: 100%;
   margin-top: -1rem;
   z-index: 99;
-  background: #6CBAAD;
+  background: #499E8F;
   transition: all 1s;
   /*
-      why am I hiding something already hidden?
-      @media (min-width: 60rem) {
-          display: none;
-      } */
+    why am I hiding something already hidden?
+    @media (min-width: 60rem) {
+        display: none;
+    } */
 }
 #veiled ul {
   list-style: none;
@@ -695,21 +705,12 @@ pre[class*=language-] {
   margin-bottom: 1rem;
 }
 
-/* almost entirley sure this should be the same in or out
-.two-fold {
-    .catalog {
-        // this is to do with stacking on smaller screens
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
- */
 /* .catalog is h3 list .inventory is h4 list
 that could be a lot clearer */
 .catalog {
   list-style: none;
   padding-left: 0;
-  color: #414141;
+  color: #5f5f5f;
 }
 .catalog li {
   margin-bottom: 1rem;
@@ -820,7 +821,7 @@ tr {
   grid-row: 1;
   grid-column: 2;
   place-self: center;
-  background: #F8F8F8;
+  background: #f8f8f8;
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
@@ -830,7 +831,7 @@ tr {
   grid-row: 1;
   grid-column: 2;
   place-self: center;
-  border: 2px #F8F8F8 solid;
+  border: 2px #f8f8f8 solid;
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
@@ -843,12 +844,12 @@ tr {
   z-index: 1;
 }
 #hero #logo svg {
-  fill: #044338;
+  fill: #2E5D58;
   max-width: 6rem;
   max-height: 6rem;
 }
 #hero #logo svg:hover {
-  fill: #046c59;
+  fill: #3D7E69;
 }
 #hero .gatsby-image-wrapper {
   grid-row: 1;
@@ -862,16 +863,16 @@ tr {
 }
 
 #footer-social {
-  border-top: 1rem solid #6CBAAD;
-  background: #044338;
-  color: #F8F8F8;
+  border-top: 1rem solid #499E8F;
+  background: #2E5D58;
+  color: #f8f8f8;
   padding: 1.953rem;
 }
 #footer-social a {
-  color: #F8F8F8;
+  color: #f8f8f8;
 }
 #footer-social a:hover {
-  color: #6CBAAD;
+  color: #499E8F;
 }
 #footer-social > h5, #overt #footer-social > ul, #veiled ul #footer-social > li, #footer-social > .inventory {
   text-align: center;
@@ -914,16 +915,16 @@ tr {
 .veiled__header a svg {
   max-height: 5rem;
   max-width: 5rem;
-  fill: #044338;
+  fill: #2E5D58;
 }
 .veiled__header a svg:hover {
-  fill: #046c59;
+  fill: #3D7E69;
 }
 
 .close-button {
   margin-top: 0;
-  background: #044338;
-  color: #6CBAAD;
+  background: #2E5D58;
+  color: #499E8F;
   border: none;
   width: 100%;
   text-align: left;
