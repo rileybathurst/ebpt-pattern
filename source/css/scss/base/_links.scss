@@ -1,20 +1,5 @@
-// Pattern Lab
-// dark mode the category titles don't change so they are undreadable
-.pl-c-category__title-link {
-	@media(prefers-color-scheme: dark) {
-		color: white !important; // has to get over the same selector
-	}
-}
-
-.pl-c-pattern__title-link:focus,
-.pl-c-pattern__title-link:hover {
-	@media(prefers-color-scheme: dark) {
-		color: lightblue !important; // this already has an important tag so it's not fixable
-	}
-}
-
 /*------------------------------------*\
-    #LINKS
+	#LINKS
 \*------------------------------------*/
 
 /**

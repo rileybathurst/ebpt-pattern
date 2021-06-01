@@ -256,21 +256,8 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .pl-c-category__title-link {
-    color: white !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .pl-c-pattern__title-link:focus,
-.pl-c-pattern__title-link:hover {
-    color: lightblue !important;
-  }
-}
-
 /*------------------------------------*\
-    #LINKS
+	#LINKS
 \*------------------------------------*/
 /**
  * Link base styles
@@ -1360,5 +1347,33 @@ tr {
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
+/*------------------------------------*\
+    #PATTERN LAB
+\*------------------------------------*/
+@media (prefers-color-scheme: dark) {
+  .pl-c-category__title-link {
+    color: white !important;
+  }
+}
+
+/* .pl-c-pattern__title-link:focus,
+.pl-c-pattern__title-link:hover {
+	@media(prefers-color-scheme: dark) {
+		color: lightblue !important; // this already has an important tag so it's not fixable
+	}
+}
+
+ */
+/* .pl-c-header {
+  background: lightseagreen !important;
+  @media (prefers-color-scheme: dark) {
+    background: lightseagreen !important;
+  }
+} */
+/* nope cant do anything with this
+.pl-c-code-copy-btn,
+.pl-js-code-copy-btn {
+  background: lightseagreen;
+} */
 
 /*# sourceMappingURL=style.css.map */

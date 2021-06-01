@@ -46,5 +46,10 @@
     #COMPONENTS
 \*------------------------------------*/
 // @import "../_patterns/**/*.scss";
-// this is breaking the scss currently as I don't really have any scss up a level?
-// I guess this is to only adjust the pattern lab not the site scss
+// ruby can do sass globs but I can't hear
+// I'm guessing this is an indication to do this
+
+/*------------------------------------*\
+    #PATTERN LAB
+\*------------------------------------*/
+@import "scss/emerald-pattern"
