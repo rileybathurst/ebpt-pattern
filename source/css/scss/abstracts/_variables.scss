@@ -34,26 +34,25 @@
  */
 
 /*------------------------------------*\
-     #COLORS
- \*------------------------------------*/
+    #COLORS
+\*------------------------------------*/
 
 /**
  * Brand Colors
  * 1) Brand=specific colors
  */
- $emerald: #499E8F;
- $moldavite: #3D7E69;
- $moss: #2E5D58;
- $ember: #EA6A00;
 
-/**
- * Neutral Colors
- * 1) Neutral colors are grayscale values used throughout the UI
- */
- $pearl: #f8f8f8;
- $hematite: #909090;
- $stone: #5f5f5f;
- $onyx: #0f0f0f;
+:root {
+    --emerald: #499e8f;
+    --moldavite: #3d7e69;
+    --moss: #2e5d58;
+    --ember: #ea6a00;
+// Neutral Colors
+    --pearl: $f8f8f8;
+    --hematite: #909090;
+    --stone: #f5f5f5;
+    --onyx: #0f0f0f;
+}
 
 /**
  * Utility Colors

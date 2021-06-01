@@ -1,27 +1,27 @@
 {
   "items": [
 {
-  "name": "$pearl",
+  "name": "--pearl",
   "value": "#F8F8F8",
   "comment": ""
 },
 {
-  "name": "$hematite",
+  "name": "--hematite",
   "value": "#909090",
   "comment": ""
 },
 {
-  "name": "$stone",
+  "name": "--stone",
   "value": "#5f5f5f",
   "comment": ""
 },
 {
-  "name": "$onyx",
+  "name": "--onyx",
   "value": "#0F0F0F",
   "comment": ""
 },
   ],
   "meta": {
-    "description": "To add to these items, use Sass variables that start with <code>$color-neutral-</code> in <code>./source/css/scss/abstracts/_variables.scss</code>"
+    "description": "To add to these items, use Sass variables that start with <code>--color-neutral-</code> in <code>./source/css/scss/abstracts/_variables.scss</code>"
   }
 }

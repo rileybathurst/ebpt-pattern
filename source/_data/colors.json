@@ -3,44 +3,44 @@
 		{
 			"colorHex" : "#499E8F",
 			"colorName" : "Emerald",
-			"variable" : "$emerald"
+			"variable" : "--emerald"
 		},
 		{
 			"colorHex" : "#3D7E69",
 			"colorName" : "Moldavite",
-			"variable" : "$moldavite"
+			"variable" : "--moldavite"
 		},
 		{
 			"colorHex" : "#2E5D58",
 			"colorName" : "Moss",
-			"variable" : "$moss"
+			"variable" : "--moss"
 		},
 		{
 			"colorHex" : "#EA6A00",
 			"colorName" : "Ember",
-			"variable" : "$ember"
+			"variable" : "--ember"
 		}
 	],
 	"neutralColors" : [
 		{
 			"colorHex" : "#F8F8F8",
 			"colorName" : "Pearl",
-			"variable" : "$pearl"
+			"variable" : "--pearl"
 		},
 		{
 			"colorHex" : "#909090",
 			"colorName" : "Hematite",
-			"variable" : "$hematite"
+			"variable" : "--hematite"
 		},
 		{
 			"colorHex" : "#5f5f5f",
 			"colorName" : "Stone",
-			"variable" : "$stone"
+			"variable" : "--stone"
 		},
 		{
 			"colorHex" : "#0F0F0F",
 			"colorName" : "Onyx",
-			"variable" : "$onyx"
+			"variable" : "--onyx"
 		}
 	],
 	"utilityColors" : [

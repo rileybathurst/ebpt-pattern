@@ -3,25 +3,25 @@
     {
             "name" : "Emerald",
             "value" : "#499E8F",
-            "comment" : "$emerald"
+            "comment" : "--emerald"
         },
         {
             "name" : "Moldavite",
             "value" : "#3D7E69",
-            "comment" : "$moldavite"
+            "comment" : "--moldavite"
         },
         {
             "name" : "Moss",
             "value" : "#2E5D58",
-            "comment" : "$moss"
+            "comment" : "--moss"
         },
         {
             "name" : "Ember",
             "value" : "#EA6A00",
-            "comment" : "$ember"
+            "comment" : "--ember"
         }
   ],
   "meta": {
-    "description": "To add to these items, use Sass comments that start with <code>$color-brand-</code> in <code>./source/css/scss/abstracts/_comments.scss</code>"
+    "description": "To add to these items, use Sass comments that start with <code>--color-brand-</code> in <code>./source/css/scss/abstracts/_comments.scss</code>"
   }
 }

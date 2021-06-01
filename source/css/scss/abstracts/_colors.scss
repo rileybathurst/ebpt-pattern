@@ -15,8 +15,8 @@
 /**
  * Body text and background colors
  */
-$color-body-text: $onyx;
-$color-body-bg: $pearl;
+$color-body-text: var(--onyx);
+$color-body-bg: var(--pearl);
 
 /**
  * Highlight colors
@@ -32,7 +32,7 @@ $color-body-bg: $pearl;
     #LINKS
 \*------------------------------------*/
 
-// $color-links: $moss;
+// $color-links: --moss;
 // $color-links-hover: $color-neutral-gray-50!default;
 // $color-links-active: $color-neutral-gray-93 !default;
 // $color-links-visited: $color-neutral-gray-93 !default;

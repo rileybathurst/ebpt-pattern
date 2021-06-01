@@ -20,6 +20,9 @@ img {
 svg {
     width: 100%;
     fill: $onyx;
+    @media (prefers-color-scheme: dark) {
+        fill: var(--pearl);
+    }
     max-width: 4rem; // most of the time these are square?
     max-height: 3rem;
     margin: 1rem;
@@ -31,11 +34,17 @@ svg {
 
 // this needs thought and documenting
 a svg {
-    fill: $emerald;
+    fill:--emerald;
+    @media (prefers-color-scheme: dark) {
+        fill: var(--moss);
+    }
 }
 
 a svg:hover {
-    fill: $moss;
+    fill: var(--moss);
+    @media (prefers-color-scheme: dark) {
+        fill: var(--emerald);
+    }
 }
 
 // this is only for the pattern lab
@@ -57,7 +66,7 @@ a svg:hover {
         > a {
             > .gatsby-image-wrapper {
                 border-radius: 50%;
-                border: 2px $pearl solid;
+                border: 2px var(--$pearl) solid;
                 box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
                 // this should be a variable
                 margin-bottom: 1rem;

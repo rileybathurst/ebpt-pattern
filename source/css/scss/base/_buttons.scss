@@ -16,9 +16,9 @@ button,
 .buttoned a {
     width: auto;
     cursor: pointer;
-    background: $emerald;
+    background: var(--emerald);
     border: none; // browser reset
-    color: $stone;
+    color: var(--stone);
     padding: 8px 16px;
     box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
     text-decoration: none; // its obvious its a button
@@ -33,9 +33,9 @@ button,
 
 button:hover,
 .buttoned a:hover {
-    background: $moldavite;
-    color: $onyx;
-    box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
+    background: var(--moldavite);
+    color: var(--onyx);
+    box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4); // variable this
 }
 
 a[href^="tel:"]:before {

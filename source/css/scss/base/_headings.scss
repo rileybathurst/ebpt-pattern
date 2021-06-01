@@ -5,35 +5,95 @@
 // 20px vertical rhythm
 
 // each line-height is 3 steps up
+// 16 isnt classical so care less about that but find something musically nice
+
+/*
+1/8
+0.125
+0.25
+0.375
+0.5
+0.625
+0.75
+0.875
+*/
+
+  // I should have a second space of 10px to double the spacing and keep in line
+  // this can be used across multiple but you can't just add so it has to be thought out
+
 h1,
 .h1 {
-  margin-top: 0;
-  font-size: 3.052rem;
-  line-height: 4.578rem; // *1.5 // should this be *1.25
+  margin-top: 0; // browser reset
+  // font-size: 3.052rem; // 48.832
+  font-size: 3rem; // 48px and were back to classical
+  // line-height: 4.578rem;
+  line-height: 3.75rem; // 60px
+  // margin-bottom: 12px -> 60
+  // margin-bottom: 32px -> 80;
+  margin-bottom: 2rem;
 }
 
 h2,
 .h2 {
-  font-size: 2.441rem;
-  line-height: 3.6615rem;
+  // font-size: 2.44125rem; // 39.06
+  // or we go with 2 * 1.125 = 40 cleaner
+  font-size: 2.5rem; // 40px
+  // line-height: 3.6615rem; // 58.584
+  line-height: 3rem; // 48px
+  margin-bottom: 2.5rem; // 40px
 }
 
 h3,
 .h3 {
-  font-size: 1.953rem;
-  line-height: 2.9295rem;
+  // font-size: 1.953rem; // 31.25
+  // 31 / 16 = 1.9375
+  // 32 / 16 = 2 so that's musically cleaner
+  // divergred from classical here
+  // unless we go up to 36
+  font-size: 2rem; // 32
+  // line-height: 2.9295rem; // 46.872
+  line-height: 2.5rem; // 40px
+  margin-bottom: 1.875rem; // 30px
 }
 
 h4,
 .h4 {
-  font-size: 1.563rem;
-  line-height: 2.3445rem;
+  // font-size: 1.5625rem; // 25px
+  // (1rem * 1.25) * 1.125
+  // 25 / 16 = 1.5625
+  // 24 / 16 = 1.5
+  font-size: 1.5rem; // 24px
+  // line-height: 2.3445rem; // 37.512
+  line-height: 2rem;
+  margin-bottom: 1.25rem; // 20px
 }
 
 h5,
 .h5 {
-  font-size: 1.25rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem; // 20px
+  line-height: 1.875rem; // 30px
+  // fits ever 2nd line so im ok with that
+  margin-bottom: 0.625rem; // 10px
+}
+
+h6,
+.h6 {
+  // @extend p; // sort of maybe? check this
+  font-size: 1rem; // 16px
+  line-height: 1.25rem; // 20px this becomes the vertical rythym
+  // margin-bottom: 10px;
+  margin-bottom: 0.625rem; // 10px skips some of the lines
+}
+
+small,
+.text_small {
+  // font-size: 0.8rem; // 12.8px
+  // 13/16=0.8125
+  // 14/16=0.875 // so this is 7/8ths but it's close and deep
+  // 12/16=0.75 // cleaner and differentiated enough
+  font-size: 0.75rem; // 12px
+  line-height: 1rem; // 16px
+  margin-bottom: 0.5rem; // 8px
 }
 
 h1,
@@ -49,9 +109,4 @@ h5,
 h6,
 .h6 {
   font-weight: 300; // light weight brandon grotesque
-}
-
-small,
-.text_small {
-  font-size: 0.8rem;
 }

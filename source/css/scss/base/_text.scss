@@ -14,6 +14,14 @@ body {
   font-style: normal;
   font-weight: 400; // regular weight brandon grotesque
   color: $onyx;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--pearl);
+  }
+}
+
+p {
+  margin-bottom: 0.625rem; // 10px
 }
 
 // this might not be finished yet
@@ -43,7 +51,7 @@ blockquote {
 
 hr {
   border: none;
-  border-bottom: 2px solid $emerald;
+  border-bottom: 2px solid var(--emerald);
   margin: 1.25rem auto; // h5
   // this could be weird if I throw one in an not expecting this
   width: 50vw;
@@ -53,10 +61,8 @@ hr {
 /**
  * Selection styles
  */
-::-moz-selection,
 ::selection {
-  color: $emerald;
-  // background: lighten($emerald, 10 ); // WebKit/Blink Browsers
+  background: var(--emerald);
 }
 
 /**
@@ -100,13 +106,13 @@ pre[class*="language-"] {
 
 // Im not sure if this goes here which probably means its not great
 .vigilant {
-    background: $ember;
+    background: var(--ember);
     padding: 0.5rem 1rem;
   }
 
 // this naming is kinda terrible
 #contact > h4 {
-  background: $emerald;
+  background: var(--emerald);
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   width: max-content; // less line-breaks
@@ -137,7 +143,7 @@ pre[class*="language-"] {
   width: 100%;
   margin-top: -1rem; // gatsby something
   z-index: 99; // above any images logo etc
-  background: $emerald; // why is this down a step?
+  background: var(--emerald); // why is this down a step?
   transition: all 1s;
 
   ul {

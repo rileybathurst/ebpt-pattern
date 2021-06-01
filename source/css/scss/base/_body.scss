@@ -23,3 +23,10 @@ html {
 	// background-color: $color-body-bg;
 	// color: $color-body-text;
 } */
+
+body {
+	background: #fff;
+	@media (prefers-color-scheme: dark) {
+		background: #000;
+	}
+}
