@@ -19,7 +19,7 @@ img {
 
 svg {
     width: 100%;
-    fill: $onyx;
+    fill: var(--onyx);
     @media (prefers-color-scheme: dark) {
         fill: var(--pearl);
     }
@@ -65,10 +65,16 @@ a svg:hover {
 
         > a {
             > .gatsby-image-wrapper {
-                border-radius: 50%;
-                border: 2px var(--$pearl) solid;
-                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
+                border: 2px var(--pearl) solid;
+                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2); // --onyx
                 // this should be a variable
+
+                @media(prefers-color-scheme: dark) {
+                    border-color: var(--onyx);
+                    box-shadow: 3px 3px 5px 1px rgba(248, 248, 248, 0.2); // --pearl
+                }
+
+                border-radius: 50%;
                 margin-bottom: 1rem;
                 max-height: 8rem;
                 // transition: 0.2s;
@@ -76,7 +82,11 @@ a svg:hover {
             } // .gatsby-image-wrapper
 
             > .gatsby-image-wrapper:hover {
-                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.5);
+                box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.5); // --onyx
+
+                @media (prefers-color-scheme: dark) {
+                    box-shadow: 3px 3px 5px 1px rgba(248, 248, 248, 0.5); // --pearl
+                }
             } // .gatsby-image-wrapper:hover
         } // a
     } // div

@@ -13,7 +13,7 @@ body {
   line-height: 1.25rem; // 20px
   font-style: normal;
   font-weight: 400; // regular weight brandon grotesque
-  color: $onyx;
+  color: var(--onyx);
 
   @media (prefers-color-scheme: dark) {
     color: var(--pearl);
@@ -116,6 +116,12 @@ pre[class*="language-"] {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   width: max-content; // less line-breaks
+
+  a:hover {
+    @media (prefers-color-scheme: dark) {
+      color: var(--moss);
+    }
+  }
 }
 
 // sort my naming out
@@ -171,7 +177,6 @@ that could be a lot clearer */
   list-style: none; // not sure this is quite right
   padding-left: 0; // reset
   @extend h4;
-  color: $stone;
 
   li {
     margin-bottom: 1rem;

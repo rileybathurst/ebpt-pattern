@@ -1,18 +1,1364 @@
-/* Error: Undefined variable.
- *    ,
- * 22 |     fill: $onyx;
- *    |           ^^^^^
- *    '
- *   source/css/scss/base/_media.scss 22:11  @import
- *   source/css/style.scss 30:9              root stylesheet */
+@charset "UTF-8";
+/*------------------------------------*\
+    #TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+ * ABSTRACTS..............................Declarations of Sass variables & mixins
+ * BASE...................................Default element styles
+ * LAYOUT.................................Layout-specific styles
+ * COMPONENTS.............................Component styles
+ * UTILITIES..............................Utility classes
+ */
+/*------------------------------------*\
+    #ABSTRACTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+/**
+ * CONTENTS
+ *
+ * COLORS
+ * Brand Colors...............Globally-available variables and config
+ * Neutral Colors.............Grayscale colors, including white and black
+ * Utility Colors.............Info, Warning, Error, Success
+ *
+ * TYPOGRAPHY
+ * Font Families..............The fonts used in the design system
+ * Sizing.....................Font sizing
+ *
+ * LAYOUT
+ * Max-widths.................Maximum layout container width
+ *
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 22 \2502      fill: $onyx;\a    \2502            ^^^^^\a    \2575 \a   source/css/scss/base/_media.scss 22:11  @import\a   source/css/style.scss 30:9              root stylesheet";
+ * SPACING
+ * Spacing defaults...........Spacing between elements
+ *
+ * BORDERS
+ * Border Width...............Border thicknesses
+ * Border Radius..............Border radius definitions
+ *
+ * ANIMATION
+ * Animation Speed............Transition/animation speed variables
+ * Animation easing...........Easing variables
+ *
+ * BREAKPOINTS
+ * Breakpoints................Global breakpoint definitions
+ */
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+/**
+ * Brand Colors
+ * 1) Brand=specific colors
+ */
+:root {
+  --emerald: #499e8f;
+  --moldavite: #3d7e69;
+  --moss: #2e5d58;
+  --ember: #ea6a00;
+  --pearl: #f8f8f8;
+  --hematite: #909090;
+  --stone: #f5f5f5;
+  --onyx: #0f0f0f;
 }
+
+/**
+ * Utility Colors
+ * 1) Utility colors are colors used to provide feedback, such as alert messages,
+ *    form validation, etc.
+ */
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Font Family
+ */
+/**
+ * Font Sizing
+ */
+/**
+ * Line Height
+ */
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ * Max Width
+ */
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+/**
+ * Spacing and offsets
+ * 1) Used to space grids and body padding
+ */
+/*------------------------------------*\
+    #BORDERS
+\*------------------------------------*/
+/**
+ * Border widths
+ */
+/**
+ * Border radius
+ */
+/*------------------------------------*\
+    #ANIMATION
+\*------------------------------------*/
+/**
+ * Transition Speed
+ */
+/**
+ * Transition Ease
+ */
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints used in media queries
+ * 1) These are not the only breakpoints used, but they provide a few defaults
+ */
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+/**
+ * Body Styles 
+ * 1) Prevent Mobile Safari from scaling up text: https://blog.55minutes.com/2012/04/iphone-text-resizing/
+ */
+/* @mixin typographyBody() {
+	font-size: $font-size-med;
+	line-height: 1.6;
+	-webkit-text-size-adjust: 100%; // 1
+} */
+/**
+ * XL Type Styles
+ */
+/* @mixin typographyBodyLarge() {
+	font-size: $font-size-med-2;
+	line-height: $line-height-large;
+} */
+/**
+ * XL Heading Styles
+ */
+/* @mixin typographyHeadingXl() {
+	font-size: $font-size-xl;
+	font-weight: normal;
+	line-height: 1.2;
+} */
+/**
+ * Large Heading Styles
+ */
+/* @mixin typographyHeadingLarge() {
+	font-size: $font-size-large;
+	font-weight: normal;
+	line-height: 1.2;
+} */
+/**
+ * Medium 2 Heading Styles
+ */
+/* @mixin typographyHeadingMed2() {
+	font-size: $font-size-med-2;
+	font-weight: normal;
+	line-height: 1.2;
+} */
+/**
+ * Medium Heading Styles
+ */
+/* @mixin typographyHeadingMed() {
+	font-size: $font-size-med;
+	font-weight: normal;
+	line-height: 1.2;
+} */
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+/**
+ * In this file, we take the literal colors from our palette (defined in variables.scss)
+ * and define them against variables that we can utilise anywhere throughout the project.
+ */
+/*------------------------------------*\
+    #GLOBAL TEXT COLOR
+\*------------------------------------*/
+/**
+ * Body text and background colors
+ */
+/**
+ * Highlight colors
+ */
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+/**
+ * Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+* {
+  box-sizing: border-box;
+}
+
+/**
+ * 1) Zero out margins and padding for elements
+ */
+html, body, div, object, iframe, h1, h2, h3, h4, .catalog, h5, .inventory, #veiled ul li, #overt ul, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * 1) Set HTML5 elements to display: block
+ */
+header, footer, nav, section, article, figure {
+  display: block;
+}
+
+/*------------------------------------*\
+    #BODY
+\*------------------------------------*/
+/**
+ * HTML base styles
+ * 1) Set the html element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ */
+html {
+  min-height: 100vh;
+  /* 1 */
+}
+
+/**
+ * Body base styles
+ * 1) Set the body element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ */
+/* body {
+	// min-height: 100vh; /* 1 
+	// font-family: $font-family-primary;
+	// @include typographyBody();
+	// background-color: $color-body-bg;
+	// color: $color-body-text;
+} */
+body {
+  background: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .pl-c-category__title-link {
+    color: white !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .pl-c-pattern__title-link:focus,
+.pl-c-pattern__title-link:hover {
+    color: lightblue !important;
+  }
+}
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+/**
+ * Link base styles
+ */
+a {
+  color: var(--onyx);
+}
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--pearl);
+  }
+}
+a:hover, a:focus {
+  color: var(--moss);
+}
+@media (prefers-color-scheme: dark) {
+  a:hover, a:focus {
+    color: var(--emerald);
+  }
+}
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/**
+ * 1) List base styles
+ */
+/**
+ * Remove list styles from unordered and ordered lists
+ */
+ol, ul {
+  list-style: none;
+}
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/*
+1/8
+0.125
+0.25
+0.375
+0.5
+0.625
+0.75
+0.875
+*/
+h1,
+.h1 {
+  margin-top: 0;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  margin-bottom: 2rem;
+}
+
+h2,
+.h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.875rem;
+}
+
+h4, .catalog,
+.h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h5, .inventory, #veiled ul li, #overt ul,
+.h5 {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin-bottom: 0.625rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+small,
+.text_small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.catalog,
+.h4,
+h5,
+.inventory,
+#veiled ul li,
+#overt ul,
+.h5,
+h6,
+.h6 {
+  font-weight: 300;
+}
+
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+/**
+ * 1) Form element base styles
+ */
+/**
+ * Input placeholder text base styles
+ */
+/* ::-webkit-input-placeholder {
+    color: $color-form-placeholder;
+}
+
+::-moz-placeholder {
+    color: $color-form-placeholder;
+}
+
+:-ms-input-placeholder {
+    color: $color-form-placeholder;
+} */
+/**
+ * Fieldset base styles
+ */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Legend base styles
+ */
+legend {
+  margin-bottom: 0.25rem;
+}
+
+/**
+ * Label base styles
+ */
+label {
+  display: block;
+  padding-bottom: 0.25rem;
+}
+
+/**
+ * Add font size 100% of form element and margin 0 to these elements
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/**
+ * Text area base styles
+ */
+textarea {
+  resize: none;
+}
+
+/**
+ * Input  and text area base styles
+ */
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  /* 	&:focus {
+          border-color: $color-form-border-focus;
+      } */
+}
+
+/**
+ * Remove webkit appearance styles from these elements
+ */
+input[type=text],
+input[type=search],
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=url],
+input[type=number],
+textarea {
+  -webkit-appearance: none;
+  display: block;
+}
+
+/**
+ * Checkbox and radio button base styles
+ */
+input[type=checkbox],
+input[type=radio] {
+  width: auto;
+  margin-right: 0.3rem;
+}
+
+/**
+ * Search input base styles
+ */
+input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/**
+ * Select
+ * 1) Remove default styling
+ */
+select {
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  /* 	&:focus {
+          border-color: $color-form-border-focus;
+      } */
+}
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+button,
+.buttoned {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+button,
+.buttoned a {
+  width: auto;
+  cursor: pointer;
+  background: var(--emerald);
+  border: none;
+  color: var(--stone);
+  padding: 8px 16px;
+  box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
+  text-decoration: none;
+  /*     
+      this is good but everywhere?
+      @media (min-width: 40rem) {
+          font-size: 1.563rem; // h4 // I cant use an extend in a media query
+          margin-left: -1rem; // this is something to do with moving away from the side of the page but it's messy
+      } */
+}
+
+button:hover,
+.buttoned a:hover {
+  background: var(--moldavite);
+  color: var(--onyx);
+  box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.4);
+}
+
+a[href^="tel:"]:before {
+  content: "☎";
+  margin-right: 0.5em;
+}
+
+.veil-button {
+  z-index: 99;
+  position: relative;
+  float: right;
+}
+@media (min-width: 65rem) {
+  .veil-button {
+    display: none;
+  }
+}
+
+/*------------------------------------*\
+    #MAIN ELEMENT
+\*------------------------------------*/
+/**
+ * Main element
+ */
+[role=main] {
+  display: block;
+  padding: 1rem;
+}
+
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+/**
+ * Responsive image styling
+ * 1) Allows for images to flex with varying screen size
+ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c-logo__img {
+  display: block;
+  max-width: 14rem;
+}
+
+svg {
+  width: 100%;
+  fill: var(--onyx);
+  max-width: 4rem;
+  max-height: 3rem;
+  margin: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  svg {
+    fill: var(--pearl);
+  }
+}
+@media (min-width: 40rem) {
+  svg {
+    max-height: 2rem;
+  }
+}
+
+a svg {
+  fill: --emerald;
+}
+@media (prefers-color-scheme: dark) {
+  a svg {
+    fill: var(--moss);
+  }
+}
+
+a svg:hover {
+  fill: var(--moss);
+}
+@media (prefers-color-scheme: dark) {
+  a svg:hover {
+    fill: var(--emerald);
+  }
+}
+
+.pl-c-pattern__toggle-icon {
+  margin: 0;
+}
+
+.team-heads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.team-heads > div {
+  flex: 0 1 4rem;
+  margin: 0.5rem 1rem;
+  text-align: center;
+}
+.team-heads > div > a > .gatsby-image-wrapper {
+  border: 2px var(--pearl) solid;
+  box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.2);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  max-height: 8rem;
+}
+@media (prefers-color-scheme: dark) {
+  .team-heads > div > a > .gatsby-image-wrapper {
+    border-color: var(--onyx);
+    box-shadow: 3px 3px 5px 1px rgba(248, 248, 248, 0.2);
+  }
+}
+.team-heads > div > a > .gatsby-image-wrapper:hover {
+  box-shadow: 3px 3px 5px 1px rgba(15, 15, 15, 0.5);
+}
+@media (prefers-color-scheme: dark) {
+  .team-heads > div > a > .gatsby-image-wrapper:hover {
+    box-shadow: 3px 3px 5px 1px rgba(248, 248, 248, 0.5);
+  }
+}
+
+/*------------------------------------*\
+    #TEXT
+\*------------------------------------*/
+html {
+  font-family: "brandon-grotesque", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--onyx);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--pearl);
+  }
+}
+
+p {
+  margin-bottom: 0.625rem;
+}
+
+.home-baselined {
+  margin-top: 0;
+}
+@media (min-width: 40rem) {
+  .home-baselined {
+    margin-top: 2rem;
+    line-height: 2.3rem;
+  }
+}
+
+/**
+ * Blockquote base styles
+ */
+blockquote {
+  font-style: italic;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/**
+ * Horizontal rule base styles
+ */
+hr {
+  border: none;
+  border-bottom: 2px solid var(--emerald);
+  margin: 1.25rem auto;
+  width: 50vw;
+  margin-right: 50vw;
+}
+
+/**
+ * Selection styles
+ */
+::selection {
+  background: var(--emerald);
+}
+
+/**
+ * Code base styles
+ */
+code {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  line-height: 1.2;
+  font-size: 0.85rem;
+}
+
+/**
+ * Preformatted text base styles
+ */
+pre {
+  font-size: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  /**
+     * Remove border from code within preformatted text block
+     */
+}
+pre code {
+  border: 0;
+}
+
+/**
+ * Code with languages associated with them
+ * 1) Override Prism sysles for code blocks with language
+ */
+code[class*=language-],
+pre[class*=language-] {
+  font-family: monospace !important;
+}
+
+.vigilant {
+  background: var(--ember);
+  padding: 0.5rem 1rem;
+}
+
+#contact > h4, #contact > .catalog {
+  background: var(--emerald);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  width: max-content;
+}
+@media (prefers-color-scheme: dark) {
+  #contact > h4 a:hover, #contact > .catalog a:hover {
+    color: var(--moss);
+  }
+}
+
+#overt ul {
+  display: none;
+  padding-left: 0;
+  justify-content: space-around;
+  list-style: none;
+}
+@media (min-width: 65rem) {
+  #overt ul {
+    display: flex;
+  }
+}
+#overt ul li {
+  gap: 1rem;
+  text-align: center;
+}
+
+#veiled {
+  position: absolute;
+  width: 100%;
+  margin-top: -1rem;
+  z-index: 99;
+  background: var(--emerald);
+  transition: all 1s;
+  /*
+    why am I hiding something already hidden?
+    @media (min-width: 60rem) {
+        display: none;
+    } */
+}
+#veiled ul {
+  list-style: none;
+  padding: 1rem;
+}
+#veiled ul li {
+  margin-bottom: 1rem;
+}
+
+/* .catalog is h3 list .inventory is h4 list
+that could be a lot clearer */
+.catalog {
+  list-style: none;
+  padding-left: 0;
+}
+.catalog li {
+  margin-bottom: 1rem;
+}
+
+.inventory {
+  margin: 0;
+}
+.inventory li {
+  margin-bottom: 1rem;
+}
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+/**
+ * Table
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/**
+ * Table header cell
+ */
+th {
+  text-align: left;
+}
+
+/**
+ * Table row
+ */
+tr {
+  vertical-align: top;
+}
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ *
+ * 1) This caps the width of text passages
+ *    to achieve a comfortable line length
+ */
+.l-linelength-container {
+  max-width: 36rem;
+}
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+.two-fold {
+  max-width: 66rem;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+.two-fold > * {
+  flex: 1 1 21rem;
+}
+
+@supports (gap: 2em) {
+  .two-fold {
+    gap: 2rem;
+  }
+}
+.single-fold {
+  max-width: 66rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.measured {
+  max-width: 40rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media (min-width: 40rem) {
+  .measured {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: 0 1fr 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 20rem) {
+  #hero {
+    grid-template-columns: 1fr 20rem 1fr;
+  }
+}
+@media (min-width: 42rem) {
+  #hero {
+    grid-template-columns: 1fr 40rem 1fr;
+  }
+}
+#hero #logo__backer {
+  grid-row: 1;
+  grid-column: 2;
+  place-self: center;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  opacity: 0.5;
+  background: var(--pearl);
+}
+@media (prefers-color-scheme: dark) {
+  #hero #logo__backer {
+    background: var(--stone);
+  }
+}
+#hero #logo__border {
+  grid-row: 1;
+  grid-column: 2;
+  place-self: center;
+  border: 2px var(--pearl) solid;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem;
+}
+#hero #logo {
+  grid-row: 1;
+  grid-column: 2;
+  place-self: center;
+  z-index: 1;
+}
+#hero #logo svg {
+  fill: var(--moss);
+  max-width: 6rem;
+  max-height: 6rem;
+}
+#hero #logo svg:hover {
+  fill: var(--moldavite);
+}
+#hero .gatsby-image-wrapper {
+  grid-row: 1;
+  grid-column: 1/4;
+  z-index: -1;
+  min-height: 10rem;
+  max-height: 20vh;
+  opacity: 0.33;
+  object-fit: cover;
+  width: 100%;
+}
+
+#footer-social {
+  border-top: 1rem solid var(--emerald);
+  background: var(--moss);
+  color: var(--pearl);
+  padding: 1.953rem;
+}
+#footer-social a {
+  color: var(--pearl);
+}
+#footer-social a:hover {
+  color: var(--emerald);
+}
+#footer-social > h5, #overt #footer-social > ul, #veiled ul #footer-social > li, #footer-social > .inventory {
+  text-align: center;
+}
+#footer-social > h1 {
+  text-align: center;
+}
+#footer-social > h2 {
+  text-align: center;
+}
+#footer-social > h3 {
+  text-align: center;
+}
+#footer-social > h4, #footer-social > .catalog {
+  text-align: center;
+}
+#footer-social > h5, #overt #footer-social > ul, #veiled ul #footer-social > li, #footer-social > .inventory {
+  text-align: center;
+}
+#footer-social > h6 {
+  text-align: center;
+}
+#footer-social ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+#footer-social ul li {
+  padding: 0.5rem;
+}
+#footer-social ul li a {
+  display: flex;
+}
+
+.veiled__header a {
+  display: block;
+  margin-top: 2rem;
+}
+.veiled__header a svg {
+  max-height: 5rem;
+  max-width: 5rem;
+  fill: var(--moss);
+}
+.veiled__header a svg:hover {
+  fill: var(--moldavite);
+}
+
+.close-button {
+  margin-top: 0;
+  background: var(--moss);
+  color: var(--emerald);
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+}
+
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+/*------------------------------------*\
+    #VISIBILITY CLASSES
+\*------------------------------------*/
+/**
+ * Is Hidden
+ * 1) Completely remove from the flow and screen readers.
+ */
+.u-is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/**
+ * Is Visibly Hidden
+ * 1) Completely remove from the flow but leave available to screen readers.
+ */
+.u-is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+/**
+ * Margin bottom none
+ * 1) Force margin bottom of 0
+ */
+.u-margin-bottom-none {
+  margin-bottom: 0 !important;
+}
+
+/**
+ * Margin bottom small
+ * 1) Force margin bottom of $spacing-small variable
+ */
+.u-margin-bottom-small {
+  margin-bottom: 1rem !important;
+}
+
+/**
+ * Margin bottom
+ * 1) Force margin bottom of $spacing variable
+ */
+.u-margin-bottom {
+  margin-bottom: 1rem !important;
+}
+
+/**
+ * Margin bottom large
+ * 1) Force margin bottom of $spacing-large variable
+ */
+.u-margin-bottom-large {
+  margin-bottom: 2rem !important;
+}
+
+.u-margin-bottom-large-to-xxl {
+  margin-bottom: 2rem !important;
+}
+@media all and (min-width: 60em) {
+  .u-margin-bottom-large-to-xxl {
+    margin-bottom: 8rem !important;
+  }
+}
+
+/**
+ * Margin top none
+ * 1) Force margin top of 0
+ */
+.u-margin-top-none {
+  margin-top: 0 !important;
+}
+
+/**
+ * Margin top small
+ * 1) Force margin top of $spacing-small variable
+ */
+.u-margin-top-small {
+  margin-top: 1rem !important;
+}
+
+/**
+ * Margin top
+ * 1) Force margin top of $spacing variable
+ */
+.u-margin-top {
+  margin-top: 1rem !important;
+}
+
+/**
+ * Margin top large
+ * 1) Force margin top of $spacing-large variable
+ */
+.u-margin-top-large {
+  margin-top: 2rem !important;
+}
+
+.u-margin-top-booking {
+  margin-top: 28rem !important;
+}
+
+/**
+ * Margin right none
+ * 1) Force margin right of 0
+ */
+.u-margin-right-none {
+  margin-right: 0 !important;
+}
+
+/**
+ * Margin right small
+ * 1) Force margin right of $spacing-small variable
+ */
+.u-margin-right-small {
+  margin-right: 1rem !important;
+}
+
+/**
+ * Margin right
+ * 1) Force margin right of $spacing variable
+ */
+.u-margin-right {
+  margin-right: 1rem !important;
+}
+
+/**
+ * Margin right large
+ * 1) Force margin right of $spacing-large variable
+ */
+.u-margin-right-large {
+  margin-right: 2rem !important;
+}
+
+/**
+ * Margin left none
+ * 1) Force margin left of 0
+ */
+.u-margin-left-none {
+  margin-left: 0 !important;
+}
+
+/**
+ * Margin left small
+ * 1) Force margin left of $spacing-small variable
+ */
+.u-margin-left-small {
+  margin-left: 1rem !important;
+}
+
+/**
+ * Margin left
+ * 1) Force margin left of $spacing variable
+ */
+.u-margin-left {
+  margin-left: 1rem !important;
+}
+
+/**
+ * Margin left large
+ * 1) Force margin left of $spacing-large variable
+ */
+.u-margin-left-large {
+  margin-left: 2rem !important;
+}
+
+/**
+ * Center display block contents
+ */
+.u-margin-center {
+  margin: 0 auto !important;
+}
+
+/**
+ * Padding none
+ */
+.u-padding-none {
+  padding: 0 !important;
+}
+
+/**
+ * Padding small
+ */
+.u-padding-small {
+  padding: 1rem !important;
+}
+
+/**
+ * Padding
+ */
+.u-padding {
+  padding: 1rem !important;
+}
+
+/**
+ * Padding large
+ */
+.u-padding-large {
+  padding: 2rem !important;
+}
+
+/**
+ * Padding top none
+ */
+.u-padding-top-none {
+  padding-top: 0 !important;
+}
+
+/**
+ * Padding top small
+ */
+.u-padding-top-small {
+  padding-top: 1rem !important;
+}
+
+/**
+ * Padding top
+ */
+.u-padding-top {
+  padding-top: 1rem !important;
+}
+
+/**
+ * Padding top large
+ */
+.u-padding-top-large {
+  padding-top: 2rem !important;
+}
+
+/**
+ * Padding bottom none
+ */
+.u-padding-bottom-none {
+  padding-bottom: 0 !important;
+}
+
+/**
+ * Padding bottom small
+ */
+.u-padding-bottom-small {
+  padding-bottom: 1rem !important;
+}
+
+/**
+ * Padding bottom
+ */
+.u-padding-bottom {
+  padding-bottom: 1rem !important;
+}
+
+/**
+ * Padding bottom large
+ */
+.u-padding-bottom-large {
+  padding-bottom: 2rem !important;
+}
+
+/**
+ * Padding right none
+ */
+.u-padding-right-none {
+  padding-right: 0 !important;
+}
+
+/**
+ * Padding right small
+ */
+.u-padding-right-small {
+  padding-right: 1rem !important;
+}
+
+/**
+ * Padding right
+ */
+.u-padding-right {
+  padding-right: 1rem !important;
+}
+
+/**
+ * Padding right large
+ */
+.u-padding-right-large {
+  padding-right: 2rem !important;
+}
+
+/**
+ * Padding left none
+ */
+.u-padding-left-none {
+  padding-left: 0 !important;
+}
+
+/**
+ * Padding left small
+ */
+.u-padding-left-small {
+  padding-left: 1rem !important;
+}
+
+/**
+ * Padding left
+ */
+.u-padding-left {
+  padding-left: 1rem !important;
+}
+
+/**
+ * Padding left large
+ */
+.u-padding-left-large {
+  padding-left: 2rem !important;
+}
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+
+/*# sourceMappingURL=style.css.map */
