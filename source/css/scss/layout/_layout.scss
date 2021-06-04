@@ -108,10 +108,14 @@
         // even tho this is after in the html it doesnt seem to be above
 
         svg {
-            fill: var(--moss);
             // margin: 1rem; this shouldnt be needed
             max-width: 6rem;
             max-height: 6rem;
+            
+            fill: var(--moss);
+            @media (prefers-color-scheme: dark) {
+                fill: var(--emerald);
+            }
         }
 
         svg:hover {

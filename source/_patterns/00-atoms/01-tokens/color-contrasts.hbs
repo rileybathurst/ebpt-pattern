@@ -1,10 +1,10 @@
 Perfers Color Scheme Light
 {{!-- too big but thats later --}}
-<ul class="sg-colors" style="background: #F8F8F8 ">
+<ul class="sg-colors">
     {{# items }}
-        <li>
+        <li style="background: #F8F8F8">
             <span class="sg-swatch" style="background: {{ value }}; clip-path: polygon(0 0, 100% 0, 0 100%);"></span>
-            <span class="sg-label">
+            <span class="sg-label" style="color: #0F0F0F;">
                 {{ name }}
                 <br />Hex {{ value }}
                 <br />Contrast {{ contrast-light }}
@@ -20,9 +20,9 @@ Perfers Color Scheme Light
 <small>{{{ meta.description }}}</small>
 
 Perfers Color Scheme Dark
-<ul class="sg-colors sg-colors__prefers-dark" style="background-color: #0F0F0F; border-radius: 8px;">
+<ul class="sg-colors sg-colors__prefers-dark" style="border-radius: 8px;">
     {{# items }}
-        <li>
+        <li style="background: #0F0F0F">
             <span class="sg-swatch" style="background: {{ value }}; clip-path: polygon(0 0, 100% 0, 0 100%);"></span>
             {{!-- clip-path: polygon(0 0, 100% 0, 0 100%); --}}
             <span class="sg-label" style="color: #fefefe;">
@@ -40,32 +40,32 @@ Perfers Color Scheme Dark
     {{/ items }}
 </ul>
 <small>{{{ meta.description }}}</small>
-
-Primary background
-<ul class="sg-colors sg-colors__prefers-dark" style="background-color: #499E8F; border-radius: 8px;">
+{{!-- 
+Emerald background
+<ul class="sg-colors" style="border-radius: 8px;">
     {{# items }}
-        <li>
+        <li style="background: #499E8F">
             <span class="sg-swatch" style="background: {{ value }}; clip-path: polygon(0 0, 100% 0, 0 100%);"></span>
             {{!-- clip-path: polygon(0 0, 100% 0, 0 100%); --}}
             <span class="sg-label" style="color: #fefefe;">
                 {{!-- style="color: #fefefe;" --}}
                 {{ name }}
                 <br />Hex {{ value }}
-                <br />Contrast {{ contrast-primary }}
-                <br />Normal Text AA {{ primary-normal-AA }}
-                <br />Normal Text AAA {{ primary-normal-AAA }}
-                <br />Large Text AA {{ primary-large-AA }}
-                <br />Large Text AAA {{ primary-large-AAA }}
-                <br />UI {{ primary-UI }}
+                <br />Contrast {{ contrast-emerald }}
+                <br />Normal Text AA {{ emerald-normal-AA }}
+                <br />Normal Text AAA {{ emerald-normal-AAA }}
+                <br />Large Text AA {{ emerald-large-AA }}
+                <br />Large Text AAA {{ emerald-large-AAA }}
+                <br />UI {{ emerald-UI }}
             </span>
         </li>
     {{/ items }}
 </ul>
 
-Secondary background
-<ul class="sg-colors sg-colors__prefers-dark" style="background-color: #3D7E69; border-radius: 8px;">
+Moldavite background
+<ul class="sg-colors" style="border-radius: 8px;">
     {{# items }}
-        <li>
+        <li style="background: #3D7E69;">
             <span class="sg-swatch" style="background: {{ value }}; clip-path: polygon(0 0, 100% 0, 0 100%);"></span>
             {{!-- clip-path: polygon(0 0, 100% 0, 0 100%); --}}
             <span class="sg-label" style="color: #fefefe;">
@@ -81,7 +81,7 @@ Secondary background
             </span>
         </li>
     {{/ items }}
-</ul>
+</ul> --}}
 
 {{!-- 
 This would be 100x nicer if it was styled or automatic but this is base level

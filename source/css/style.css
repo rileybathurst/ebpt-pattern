@@ -590,6 +590,11 @@ svg {
     max-height: 2rem;
   }
 }
+@media (prefers-color-scheme: dark) {
+  svg g {
+    fill: var(--emerald);
+  }
+}
 
 a svg {
   fill: --emerald;
@@ -937,9 +942,14 @@ tr {
   z-index: 1;
 }
 #hero #logo svg {
-  fill: var(--moss);
   max-width: 6rem;
   max-height: 6rem;
+  fill: var(--moss);
+}
+@media (prefers-color-scheme: dark) {
+  #hero #logo svg {
+    fill: var(--emerald);
+  }
 }
 #hero #logo svg:hover {
   fill: var(--moldavite);
