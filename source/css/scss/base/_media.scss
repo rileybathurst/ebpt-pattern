@@ -30,6 +30,12 @@ svg {
     @media (min-width: 40rem) {
         max-height: 2rem;
     }
+
+    /* g {
+        @media (prefers-color-scheme: dark) {
+            fill: var(--emerald);
+        }
+    } */
 }
 
 // this needs thought and documenting
